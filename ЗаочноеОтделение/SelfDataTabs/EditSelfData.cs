@@ -8,16 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ЗаочноеОтделение
+namespace ЗаочноеОтделение.SelfDataTabs
 {
-    public partial class Form1 : Form
+    public partial class EditSelfData : Form
     {
-        public Form1()
+        public EditSelfData()
         {
             InitializeComponent();
-
-
-            WindowState = FormWindowState.Maximized;
         }
     }
 }
