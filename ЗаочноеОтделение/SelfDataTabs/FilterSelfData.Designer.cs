@@ -31,18 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gender = new System.Windows.Forms.GroupBox();
-            this.genderM = new System.Windows.Forms.CheckBox();
             this.genderF = new System.Windows.Forms.CheckBox();
+            this.genderM = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.GroupBox();
+            this.languageN = new System.Windows.Forms.CheckBox();
             this.languageF = new System.Windows.Forms.CheckBox();
             this.languageE = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.languageN = new System.Windows.Forms.CheckBox();
             this.status = new System.Windows.Forms.ComboBox();
             this.birthdayYear = new System.Windows.Forms.ComboBox();
             this.birthdayMonth = new System.Windows.Forms.ComboBox();
@@ -87,17 +87,6 @@
             this.gender.TabIndex = 42;
             this.gender.TabStop = false;
             // 
-            // genderM
-            // 
-            this.genderM.AutoSize = true;
-            this.genderM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genderM.Location = new System.Drawing.Point(6, 13);
-            this.genderM.Name = "genderM";
-            this.genderM.Size = new System.Drawing.Size(85, 20);
-            this.genderM.TabIndex = 43;
-            this.genderM.Text = "Мужской";
-            this.genderM.UseVisualStyleBackColor = true;
-            // 
             // genderF
             // 
             this.genderF.AutoSize = true;
@@ -108,6 +97,17 @@
             this.genderF.TabIndex = 43;
             this.genderF.Text = "Женский";
             this.genderF.UseVisualStyleBackColor = true;
+            // 
+            // genderM
+            // 
+            this.genderM.AutoSize = true;
+            this.genderM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genderM.Location = new System.Drawing.Point(6, 13);
+            this.genderM.Name = "genderM";
+            this.genderM.Size = new System.Drawing.Size(85, 20);
+            this.genderM.TabIndex = 43;
+            this.genderM.Text = "Мужской";
+            this.genderM.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -147,6 +147,17 @@
             this.language.Size = new System.Drawing.Size(320, 39);
             this.language.TabIndex = 48;
             this.language.TabStop = false;
+            // 
+            // languageN
+            // 
+            this.languageN.AutoSize = true;
+            this.languageN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.languageN.Location = new System.Drawing.Point(225, 13);
+            this.languageN.Name = "languageN";
+            this.languageN.Size = new System.Drawing.Size(93, 20);
+            this.languageN.TabIndex = 43;
+            this.languageN.Text = "Немецкий";
+            this.languageN.UseVisualStyleBackColor = true;
             // 
             // languageF
             // 
@@ -197,17 +208,6 @@
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 50;
             this.label4.Text = "Статус";
-            // 
-            // languageN
-            // 
-            this.languageN.AutoSize = true;
-            this.languageN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.languageN.Location = new System.Drawing.Point(225, 13);
-            this.languageN.Name = "languageN";
-            this.languageN.Size = new System.Drawing.Size(93, 20);
-            this.languageN.TabIndex = 43;
-            this.languageN.Text = "Немецкий";
-            this.languageN.UseVisualStyleBackColor = true;
             // 
             // status
             // 
@@ -346,6 +346,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gender);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FilterSelfData";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

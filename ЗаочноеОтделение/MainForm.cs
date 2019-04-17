@@ -55,6 +55,8 @@ namespace ЗаочноеОтделение
             {
                 MessageBox.Show("Фильтр сброшен");
             };
+
+            //selfTabDataTable.Columns[0].
         }
 
         /// <summary>
@@ -89,6 +91,54 @@ namespace ЗаочноеОтделение
             subjectTabToolsSeparatorHorizontal.Width = tabs.Width;
         }
 
+        /// <summary>
+        /// Создание интерфейса для вкладки "Студенты по группам"
+        /// </summary>
+        internal void CreateStudentsTab()
+        {
+            // Меняем размер таблицы в зависимости от размера формы.
+            // Из-за того, что мы открываем в полный экран программу, 
+            // мы подстраиваем таблицу под размер
+            // Ширина
+            studentsTabDataTable.Width = tabs.Width - 25;
+            // Высота
+            studentsTabDataTable.Height = tabs.Height - 150;
+            // Ширина полосы разделения у меню
+            studentsTabToolsSeparatorHorizontal.Width = tabs.Width;
+        }
+
+        /// <summary>
+        /// Создание интерфейса для вкладки "Дипломный проект"
+        /// </summary>
+        internal void CreateDiplomTab()
+        {
+            // Меняем размер таблицы в зависимости от размера формы.
+            // Из-за того, что мы открываем в полный экран программу, 
+            // мы подстраиваем таблицу под размер
+            // Ширина
+            diplomTabDataTable.Width = tabs.Width - 25;
+            // Высота
+            diplomTabDataTable.Height = tabs.Height - 150;
+            // Ширина полосы разделения у меню
+            diplomTabToolsSeparatorHorizontal.Width = tabs.Width;
+        }
+
+        /// <summary>
+        /// Создание интерфейса для вкладки "Движение"
+        /// </summary>
+        internal void CreateMoveTab()
+        {
+            // Меняем размер таблицы в зависимости от размера формы.
+            // Из-за того, что мы открываем в полный экран программу, 
+            // мы подстраиваем таблицу под размер
+            // Ширина
+            moveTabDataTable.Width = tabs.Width - 25;
+            // Высота
+            moveTabDataTable.Height = tabs.Height - 150;
+            // Ширина полосы разделения у меню
+            moveTabToolsSeparatorHorizontal.Width = tabs.Width;
+        }
+
         #endregion
 
 
@@ -116,6 +166,12 @@ namespace ЗаочноеОтделение
             CreateOzenkiTab();
             // Создаем вкладку "Предметы"
             CreateSubjectTab();
+            // Создаем вкладку "Студенты по группам"
+            CreateStudentsTab();
+            // Создаем вкладку "Дипломный проект"
+            CreateDiplomTab();
+            // Создаем вкладку "Движение"
+            CreateMoveTab();
         }
     }
 }
