@@ -26,10 +26,15 @@ namespace ЗаочноеОтделение
             // Ширина
             selfTabDataTable.Width = tabs.Width - 25;
             // Высота
-            selfTabDataTable.Height = tabs.Height - 150; 
+            selfTabDataTable.Height = tabs.Height - 200; 
             // Ширина полосы разделения у меню
             selfTabToolsSeparatorHorizontal.Width = tabs.Width;
-
+            // Позиция кнопки ниже таблицы
+            selfTabShowGroups.Location = 
+                new Point(selfTabDataTable.Location.X, 
+                selfTabDataTable.Location.Y + selfTabDataTable.Height + 15);
+            // Меняем размер разделителя у таблицы
+            selfTabDataTableSeparator.Width = tabs.Width - 27;
             // Событие при клике на кнопку "Добавить запись"
             // Создаем новый объект формы добавления записи (AddSelfData)
             // и открываем ее
@@ -55,8 +60,6 @@ namespace ЗаочноеОтделение
             {
                 MessageBox.Show("Фильтр сброшен");
             };
-
-            //selfTabDataTable.Columns[0].
         }
 
         /// <summary>
@@ -70,9 +73,11 @@ namespace ЗаочноеОтделение
             // Ширина
             ozenkiTabDataTable.Width = tabs.Width - 25;
             // Высота
-            ozenkiTabDataTable.Height = tabs.Height - 150;
+            ozenkiTabDataTable.Height = tabs.Height - 200;
             // Ширина полосы разделения у меню
             ozenkiTabToolsSeparatorHorizontal.Width = tabs.Width;
+            // Меняем размер разделителя у таблицы
+            ozenkiTabDataTableSeparator.Width = tabs.Width - 27;
         }
 
         /// <summary>
@@ -86,25 +91,18 @@ namespace ЗаочноеОтделение
             // Ширина
             subjectTabDataTable.Width = tabs.Width - 25;
             // Высота
-            subjectTabDataTable.Height = tabs.Height - 150;
+            subjectTabDataTable.Height = tabs.Height - 200;
             // Ширина полосы разделения у меню
             subjectTabToolsSeparatorHorizontal.Width = tabs.Width;
-        }
-
-        /// <summary>
-        /// Создание интерфейса для вкладки "Студенты по группам"
-        /// </summary>
-        internal void CreateStudentsTab()
-        {
-            // Меняем размер таблицы в зависимости от размера формы.
-            // Из-за того, что мы открываем в полный экран программу, 
-            // мы подстраиваем таблицу под размер
-            // Ширина
-            studentsTabDataTable.Width = tabs.Width - 25;
-            // Высота
-            studentsTabDataTable.Height = tabs.Height - 150;
-            // Ширина полосы разделения у меню
-            studentsTabToolsSeparatorHorizontal.Width = tabs.Width;
+            // Позиция кнопок ниже таблицы
+            subjectTabShowTeacher.Location =
+                new Point(subjectTabDataTable.Location.X, 
+                subjectTabDataTable.Location.Y + subjectTabDataTable.Height + 15);
+            subjectTabShowSubjectInCourse.Location =
+                new Point(subjectTab.Location.X + subjectTabShowTeacher.Width + 15,
+                subjectTabDataTable.Location.Y + subjectTabDataTable.Height + 15);
+            // Меняем размер разделителя у таблицы
+            subjectTabDataTableSeparator.Width = tabs.Width - 27;
         }
 
         /// <summary>
@@ -118,9 +116,15 @@ namespace ЗаочноеОтделение
             // Ширина
             diplomTabDataTable.Width = tabs.Width - 25;
             // Высота
-            diplomTabDataTable.Height = tabs.Height - 150;
+            diplomTabDataTable.Height = tabs.Height - 200;
             // Ширина полосы разделения у меню
             diplomTabToolsSeparatorHorizontal.Width = tabs.Width;
+            // Позиция кнопки ниже таблицы
+            diplomTabShowTeacher.Location =
+                new Point(diplomTabDataTable.Location.X,
+                diplomTabDataTable.Location.Y + diplomTabDataTable.Height + 15);
+            // Меняем размер разделителя у таблицы
+            diplomTabDataTableSeparator.Width = tabs.Width - 27;
         }
 
         /// <summary>
@@ -134,12 +138,15 @@ namespace ЗаочноеОтделение
             // Ширина
             moveTabDataTable.Width = tabs.Width - 25;
             // Высота
-            moveTabDataTable.Height = tabs.Height - 150;
+            moveTabDataTable.Height = tabs.Height - 200;
             // Ширина полосы разделения у меню
             moveTabToolsSeparatorHorizontal.Width = tabs.Width;
+            // Меняем размер разделителя у таблицы
+            moveTabDataTableSeparator.Width = tabs.Width - 27;
         }
 
         #endregion
+
 
 
         /// <summary>
@@ -166,8 +173,6 @@ namespace ЗаочноеОтделение
             CreateOzenkiTab();
             // Создаем вкладку "Предметы"
             CreateSubjectTab();
-            // Создаем вкладку "Студенты по группам"
-            CreateStudentsTab();
             // Создаем вкладку "Дипломный проект"
             CreateDiplomTab();
             // Создаем вкладку "Движение"

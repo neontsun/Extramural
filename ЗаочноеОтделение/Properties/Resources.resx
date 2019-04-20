@@ -133,4 +133,13 @@
   <data name="filterClear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filterClear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="showGroups" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showGroups.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowSubjectInCourse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowSubjectInCourse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowTeachers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowTeachers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
