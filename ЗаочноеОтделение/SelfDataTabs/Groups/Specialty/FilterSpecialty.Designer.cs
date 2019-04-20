@@ -30,7 +30,7 @@
         {
             this.save = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.specCode = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -59,19 +59,19 @@
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // specCode
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.specCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.specCode.FormattingEnabled = true;
+            this.specCode.Items.AddRange(new object[] {
             "Отчислен",
             "Выпущен",
             "Обучается"});
-            this.comboBox3.Location = new System.Drawing.Point(124, 112);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 25);
-            this.comboBox3.TabIndex = 81;
+            this.specCode.Location = new System.Drawing.Point(124, 112);
+            this.specCode.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.specCode.Name = "specCode";
+            this.specCode.Size = new System.Drawing.Size(158, 25);
+            this.specCode.TabIndex = 81;
             // 
             // panel4
             // 
@@ -99,7 +99,7 @@
             this.ClientSize = new System.Drawing.Size(578, 273);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.specCode);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label4);
             this.MaximizeBox = false;
@@ -116,7 +116,7 @@
 
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox specCode;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
     }

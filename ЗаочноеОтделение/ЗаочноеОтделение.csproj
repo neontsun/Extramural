@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OzenkiDataTabs\AddOzenkiData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OzenkiDataTabs\AddOzenkiData.Designer.cs">
+      <DependentUpon>AddOzenkiData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OzenkiDataTabs\EditOzenkiData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OzenkiDataTabs\EditOzenkiData.Designer.cs">
+      <DependentUpon>EditOzenkiData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OzenkiDataTabs\FilterOzenkiData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OzenkiDataTabs\FilterOzenkiData.Designer.cs">
+      <DependentUpon>FilterOzenkiData.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelfDataTabs\AddSelfData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,15 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OzenkiDataTabs\AddOzenkiData.resx">
+      <DependentUpon>AddOzenkiData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OzenkiDataTabs\EditOzenkiData.resx">
+      <DependentUpon>EditOzenkiData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OzenkiDataTabs\FilterOzenkiData.resx">
+      <DependentUpon>FilterOzenkiData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelfDataTabs\AddSelfData.resx">
       <DependentUpon>AddSelfData.cs</DependentUpon>
     </EmbeddedResource>

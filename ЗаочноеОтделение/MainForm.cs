@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ЗаочноеОтделение.OzenkiDataTabs;
 using ЗаочноеОтделение.SelfDataTabs;
 using ЗаочноеОтделение.SelfDataTabs.Groups;
 
@@ -82,6 +83,18 @@ namespace ЗаочноеОтделение
             ozenkiTabToolsSeparatorHorizontal.Width = tabs.Width;
             // Меняем размер разделителя у таблицы
             ozenkiTabDataTableSeparator.Width = tabs.Width - 27;
+
+            // Событие при нажатие на кнопку "Добавить запись"
+            ozenkiTabCreateNote.Click += (f, a) => new AddOzenkiData().ShowDialog();
+            // Событие при нажатие на кнопку "Редактировать запись"
+            ozenkiTabEditNote.Click += (f, a) => new EditOzenkiData().ShowDialog();
+            // Событие при нажатие на кнопку "Очистить фильтр"
+            ozenkiTabFilterClear.Click += (f, a) => 
+            {
+                MessageBox.Show("Фильтр сброшен");
+            };
+            // Событие при нажатие на кнопку "Фильтр"
+            ozenkiTabFilter.Click += (f, a) => new FilterOzenkiData().ShowDialog();
         }
 
         /// <summary>

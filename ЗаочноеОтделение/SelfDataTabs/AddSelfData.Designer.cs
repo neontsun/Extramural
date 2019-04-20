@@ -37,8 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gender = new System.Windows.Forms.GroupBox();
-            this.genderM = new System.Windows.Forms.RadioButton();
             this.genderF = new System.Windows.Forms.RadioButton();
+            this.genderM = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.birthday = new System.Windows.Forms.DateTimePicker();
@@ -53,10 +53,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.GroupBox();
+            this.languageN = new System.Windows.Forms.RadioButton();
             this.languageF = new System.Windows.Forms.RadioButton();
             this.languageE = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.languageN = new System.Windows.Forms.RadioButton();
             this.education = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -93,7 +93,7 @@
             this.cipher.Location = new System.Drawing.Point(85, 91);
             this.cipher.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.cipher.Name = "cipher";
-            this.cipher.Size = new System.Drawing.Size(331, 26);
+            this.cipher.Size = new System.Drawing.Size(217, 26);
             this.cipher.TabIndex = 4;
             // 
             // fio
@@ -153,18 +153,6 @@
             this.gender.TabIndex = 10;
             this.gender.TabStop = false;
             // 
-            // genderM
-            // 
-            this.genderM.AutoSize = true;
-            this.genderM.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genderM.Location = new System.Drawing.Point(6, 9);
-            this.genderM.Name = "genderM";
-            this.genderM.Size = new System.Drawing.Size(84, 21);
-            this.genderM.TabIndex = 11;
-            this.genderM.TabStop = true;
-            this.genderM.Text = "Мужской";
-            this.genderM.UseVisualStyleBackColor = true;
-            // 
             // genderF
             // 
             this.genderF.AutoSize = true;
@@ -176,6 +164,18 @@
             this.genderF.TabStop = true;
             this.genderF.Text = "Женский";
             this.genderF.UseVisualStyleBackColor = true;
+            // 
+            // genderM
+            // 
+            this.genderM.AutoSize = true;
+            this.genderM.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genderM.Location = new System.Drawing.Point(6, 9);
+            this.genderM.Name = "genderM";
+            this.genderM.Size = new System.Drawing.Size(84, 21);
+            this.genderM.TabIndex = 11;
+            this.genderM.TabStop = true;
+            this.genderM.Text = "Мужской";
+            this.genderM.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -237,7 +237,7 @@
             this.phone.Location = new System.Drawing.Point(508, 91);
             this.phone.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(331, 26);
+            this.phone.Size = new System.Drawing.Size(220, 26);
             this.phone.TabIndex = 19;
             // 
             // label6
@@ -306,6 +306,18 @@
             this.language.TabIndex = 25;
             this.language.TabStop = false;
             // 
+            // languageN
+            // 
+            this.languageN.AutoSize = true;
+            this.languageN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.languageN.Location = new System.Drawing.Point(226, 9);
+            this.languageN.Name = "languageN";
+            this.languageN.Size = new System.Drawing.Size(93, 21);
+            this.languageN.TabIndex = 11;
+            this.languageN.TabStop = true;
+            this.languageN.Text = "Немецкий";
+            this.languageN.UseVisualStyleBackColor = true;
+            // 
             // languageF
             // 
             this.languageF.AutoSize = true;
@@ -339,18 +351,6 @@
             this.label8.Size = new System.Drawing.Size(134, 18);
             this.label8.TabIndex = 24;
             this.label8.Text = "Изучаемый язык";
-            // 
-            // languageN
-            // 
-            this.languageN.AutoSize = true;
-            this.languageN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.languageN.Location = new System.Drawing.Point(226, 9);
-            this.languageN.Name = "languageN";
-            this.languageN.Size = new System.Drawing.Size(93, 21);
-            this.languageN.TabIndex = 11;
-            this.languageN.TabStop = true;
-            this.languageN.Text = "Немецкий";
-            this.languageN.UseVisualStyleBackColor = true;
             // 
             // education
             // 
