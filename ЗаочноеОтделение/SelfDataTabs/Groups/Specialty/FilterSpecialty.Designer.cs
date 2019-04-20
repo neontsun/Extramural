@@ -40,7 +40,7 @@
             this.save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save.Location = new System.Drawing.Point(171, 199);
+            this.save.Location = new System.Drawing.Point(171, 226);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(140, 32);
             this.save.TabIndex = 83;
@@ -52,7 +52,7 @@
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(317, 199);
+            this.cancel.Location = new System.Drawing.Point(317, 226);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(140, 32);
             this.cancel.TabIndex = 82;
@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 352);
+            this.ClientSize = new System.Drawing.Size(578, 273);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.comboBox3);
