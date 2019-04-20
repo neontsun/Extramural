@@ -86,6 +86,11 @@
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.selfTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.ozenkiTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.subjectTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.diplomTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.selfTabShowGroups = new System.Windows.Forms.Button();
             this.selfTabEditNote = new System.Windows.Forms.Button();
             this.selfTabFilterClear = new System.Windows.Forms.Button();
@@ -105,16 +110,11 @@
             this.subjectTabFilterClear = new System.Windows.Forms.Button();
             this.subjectTabFilter = new System.Windows.Forms.Button();
             this.subjectTabCreateNote = new System.Windows.Forms.Button();
+            this.diplomTabShowTeacher = new System.Windows.Forms.Button();
             this.diplomTabEditNote = new System.Windows.Forms.Button();
             this.diplomTabFilterClear = new System.Windows.Forms.Button();
             this.diplomTabFilter = new System.Windows.Forms.Button();
             this.diplomTabCreateNote = new System.Windows.Forms.Button();
-            this.diplomTabShowTeacher = new System.Windows.Forms.Button();
-            this.selfTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.ozenkiTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.subjectTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.diplomTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.tabs.SuspendLayout();
             this.selfTab.SuspendLayout();
             this.ozenkiTab.SuspendLayout();
@@ -273,10 +273,10 @@
             // ozenkiTab
             // 
             this.ozenkiTab.Controls.Add(this.ozenkiTabDataTableSeparator);
-            this.ozenkiTab.Controls.Add(this.ozenkiTabEditNote);
             this.ozenkiTab.Controls.Add(this.ozenkiTabToolsSeparatorVertical2);
             this.ozenkiTab.Controls.Add(this.ozenkiTabToolsSeparatorVertical1);
             this.ozenkiTab.Controls.Add(this.ozenkiTabToolsSeparatorHorizontal);
+            this.ozenkiTab.Controls.Add(this.ozenkiTabEditNote);
             this.ozenkiTab.Controls.Add(this.ozenkiTabFilterClear);
             this.ozenkiTab.Controls.Add(this.ozenkiTabFilter);
             this.ozenkiTab.Controls.Add(this.ozenkiTabCreateNote);
@@ -366,13 +366,13 @@
             // moveTab
             // 
             this.moveTab.Controls.Add(this.moveTabDataTableSeparator);
+            this.moveTab.Controls.Add(this.moveTabToolsSeparatorVertical2);
+            this.moveTab.Controls.Add(this.moveTabToolsSeparatorVertical1);
+            this.moveTab.Controls.Add(this.moveTabToolsSeparatorHorizontal);
             this.moveTab.Controls.Add(this.moveTabEditNote);
             this.moveTab.Controls.Add(this.moveTabFilterClear);
             this.moveTab.Controls.Add(this.moveTabFilter);
             this.moveTab.Controls.Add(this.moveTabCreateNote);
-            this.moveTab.Controls.Add(this.moveTabToolsSeparatorVertical2);
-            this.moveTab.Controls.Add(this.moveTabToolsSeparatorVertical1);
-            this.moveTab.Controls.Add(this.moveTabToolsSeparatorHorizontal);
             this.moveTab.Controls.Add(this.moveTabDataTable);
             this.moveTab.Location = new System.Drawing.Point(4, 26);
             this.moveTab.Name = "moveTab";
@@ -428,12 +428,12 @@
             // subjectTab
             // 
             this.subjectTab.Controls.Add(this.subjectTabDataTableSeparator);
-            this.subjectTab.Controls.Add(this.subjectTabShowSubjectInCourse);
-            this.subjectTab.Controls.Add(this.subjectTabShowTeacher);
-            this.subjectTab.Controls.Add(this.subjectTabEditNote);
             this.subjectTab.Controls.Add(this.subjectTabToolsSeparatorVertical2);
             this.subjectTab.Controls.Add(this.subjectTabToolsSeparatorVertical1);
             this.subjectTab.Controls.Add(this.subjectTabToolsSeparatorHorizontal);
+            this.subjectTab.Controls.Add(this.subjectTabShowSubjectInCourse);
+            this.subjectTab.Controls.Add(this.subjectTabShowTeacher);
+            this.subjectTab.Controls.Add(this.subjectTabEditNote);
             this.subjectTab.Controls.Add(this.subjectTabFilterClear);
             this.subjectTab.Controls.Add(this.subjectTabFilter);
             this.subjectTab.Controls.Add(this.subjectTabCreateNote);
@@ -490,14 +490,14 @@
             // diplomTab
             // 
             this.diplomTab.Controls.Add(this.diplomTabDataTableSeparator);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical2);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical1);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorHorizontal);
             this.diplomTab.Controls.Add(this.diplomTabShowTeacher);
             this.diplomTab.Controls.Add(this.diplomTabEditNote);
             this.diplomTab.Controls.Add(this.diplomTabFilterClear);
             this.diplomTab.Controls.Add(this.diplomTabFilter);
             this.diplomTab.Controls.Add(this.diplomTabCreateNote);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical2);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical1);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorHorizontal);
             this.diplomTab.Controls.Add(this.diplomTabDataTable);
             this.diplomTab.Location = new System.Drawing.Point(4, 26);
             this.diplomTab.Name = "diplomTab";
@@ -638,6 +638,46 @@
             this.columnHeader27.Text = "Руководитель";
             this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader27.Width = 204;
+            // 
+            // selfTabDataTableSeparator
+            // 
+            this.selfTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.selfTabDataTableSeparator.Location = new System.Drawing.Point(9, 121);
+            this.selfTabDataTableSeparator.Name = "selfTabDataTableSeparator";
+            this.selfTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.selfTabDataTableSeparator.TabIndex = 18;
+            // 
+            // ozenkiTabDataTableSeparator
+            // 
+            this.ozenkiTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ozenkiTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.ozenkiTabDataTableSeparator.Name = "ozenkiTabDataTableSeparator";
+            this.ozenkiTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.ozenkiTabDataTableSeparator.TabIndex = 19;
+            // 
+            // moveTabDataTableSeparator
+            // 
+            this.moveTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.moveTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.moveTabDataTableSeparator.Name = "moveTabDataTableSeparator";
+            this.moveTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.moveTabDataTableSeparator.TabIndex = 19;
+            // 
+            // subjectTabDataTableSeparator
+            // 
+            this.subjectTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.subjectTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.subjectTabDataTableSeparator.Name = "subjectTabDataTableSeparator";
+            this.subjectTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.subjectTabDataTableSeparator.TabIndex = 19;
+            // 
+            // diplomTabDataTableSeparator
+            // 
+            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
+            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.diplomTabDataTableSeparator.TabIndex = 20;
             // 
             // selfTabShowGroups
             // 
@@ -930,6 +970,22 @@
             this.subjectTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.subjectTabCreateNote.UseVisualStyleBackColor = true;
             // 
+            // diplomTabShowTeacher
+            // 
+            this.diplomTabShowTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diplomTabShowTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diplomTabShowTeacher.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.diplomTabShowTeacher.Image = global::ЗаочноеОтделение.Properties.Resources.ShowTeachers;
+            this.diplomTabShowTeacher.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.diplomTabShowTeacher.Location = new System.Drawing.Point(8, 588);
+            this.diplomTabShowTeacher.Name = "diplomTabShowTeacher";
+            this.diplomTabShowTeacher.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.diplomTabShowTeacher.Size = new System.Drawing.Size(268, 35);
+            this.diplomTabShowTeacher.TabIndex = 19;
+            this.diplomTabShowTeacher.Text = "Показать преподавателей";
+            this.diplomTabShowTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.diplomTabShowTeacher.UseVisualStyleBackColor = true;
+            // 
             // diplomTabEditNote
             // 
             this.diplomTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -990,62 +1046,6 @@
             this.diplomTabCreateNote.Text = "Добавить запись";
             this.diplomTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.diplomTabCreateNote.UseVisualStyleBackColor = true;
-            // 
-            // diplomTabShowTeacher
-            // 
-            this.diplomTabShowTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.diplomTabShowTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diplomTabShowTeacher.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.diplomTabShowTeacher.Image = global::ЗаочноеОтделение.Properties.Resources.ShowTeachers;
-            this.diplomTabShowTeacher.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.diplomTabShowTeacher.Location = new System.Drawing.Point(8, 588);
-            this.diplomTabShowTeacher.Name = "diplomTabShowTeacher";
-            this.diplomTabShowTeacher.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.diplomTabShowTeacher.Size = new System.Drawing.Size(268, 35);
-            this.diplomTabShowTeacher.TabIndex = 19;
-            this.diplomTabShowTeacher.Text = "Показать преподавателей";
-            this.diplomTabShowTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.diplomTabShowTeacher.UseVisualStyleBackColor = true;
-            // 
-            // selfTabDataTableSeparator
-            // 
-            this.selfTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.selfTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.selfTabDataTableSeparator.Name = "selfTabDataTableSeparator";
-            this.selfTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.selfTabDataTableSeparator.TabIndex = 18;
-            // 
-            // ozenkiTabDataTableSeparator
-            // 
-            this.ozenkiTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ozenkiTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.ozenkiTabDataTableSeparator.Name = "ozenkiTabDataTableSeparator";
-            this.ozenkiTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.ozenkiTabDataTableSeparator.TabIndex = 19;
-            // 
-            // moveTabDataTableSeparator
-            // 
-            this.moveTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.moveTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.moveTabDataTableSeparator.Name = "moveTabDataTableSeparator";
-            this.moveTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.moveTabDataTableSeparator.TabIndex = 19;
-            // 
-            // subjectTabDataTableSeparator
-            // 
-            this.subjectTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.subjectTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.subjectTabDataTableSeparator.Name = "subjectTabDataTableSeparator";
-            this.subjectTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.subjectTabDataTableSeparator.TabIndex = 19;
-            // 
-            // diplomTabDataTableSeparator
-            // 
-            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
-            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.diplomTabDataTableSeparator.TabIndex = 20;
             // 
             // MainForm
             // 

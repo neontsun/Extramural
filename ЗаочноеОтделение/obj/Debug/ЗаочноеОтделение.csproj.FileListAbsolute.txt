@@ -12,3 +12,11 @@ C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтдел
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.AddSelfData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.EditSelfData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.FilterSelfData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.Groups.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.AddGroups.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.EditGroups.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.FilterGroups.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.Specialty.AddSpecialty.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.Specialty.Specialty.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.Specialty.EditSpecialty.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SelfDataTabs.Groups.Specialty.FilterSpecialty.resources

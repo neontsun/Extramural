@@ -71,6 +71,54 @@
     <Compile Include="SelfDataTabs\FilterSelfData.Designer.cs">
       <DependentUpon>FilterSelfData.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelfDataTabs\Groups\AddGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\AddGroups.Designer.cs">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\EditGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\EditGroups.Designer.cs">
+      <DependentUpon>EditGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\FilterGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\FilterGroups.Designer.cs">
+      <DependentUpon>FilterGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\AddSpecialty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\AddSpecialty.Designer.cs">
+      <DependentUpon>AddSpecialty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\EditSpecialty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\EditSpecialty.Designer.cs">
+      <DependentUpon>EditSpecialty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\FilterSpecialty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\FilterSpecialty.Designer.cs">
+      <DependentUpon>FilterSpecialty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\Specialty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDataTabs\Groups\Specialty\Specialty.Designer.cs">
+      <DependentUpon>Specialty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +146,30 @@
     </Compile>
     <EmbeddedResource Include="SelfDataTabs\FilterSelfData.resx">
       <DependentUpon>FilterSelfData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\AddGroups.resx">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\EditGroups.resx">
+      <DependentUpon>EditGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\FilterGroups.resx">
+      <DependentUpon>FilterGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\Groups.resx">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\Specialty\AddSpecialty.resx">
+      <DependentUpon>AddSpecialty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\Specialty\EditSpecialty.resx">
+      <DependentUpon>EditSpecialty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\Specialty\FilterSpecialty.resx">
+      <DependentUpon>FilterSpecialty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDataTabs\Groups\Specialty\Specialty.resx">
+      <DependentUpon>Specialty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -139,5 +211,9 @@
   <ItemGroup>
     <None Include="Resources\ShowSubjectInCourse.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showSpec.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

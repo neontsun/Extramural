@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ЗаочноеОтделение.SelfDataTabs;
+using ЗаочноеОтделение.SelfDataTabs.Groups;
 
 namespace ЗаочноеОтделение
 {
@@ -60,6 +61,9 @@ namespace ЗаочноеОтделение
             {
                 MessageBox.Show("Фильтр сброшен");
             };
+
+            // Событие при клике на кнопку "Показать группы"
+            selfTabShowGroups.Click += (f, a) => new Groups().ShowDialog();
         }
 
         /// <summary>
