@@ -239,7 +239,10 @@ namespace ЗаочноеОтделение
 
                 // Так как изначально у нас главная вкладка - Личные данные,
                 // то при запуске программы заполняем таблицу на данной вкладке
-                this.LoadDataInSelfDataTable();
+                if (Properties.Settings.Default.ConnectionPath != string.Empty)
+                    this.LoadDataInSelfDataTable();
+                else
+                    MessageBox.Show("Укажите путь к базе данных.");
             };
 
             #endregion
