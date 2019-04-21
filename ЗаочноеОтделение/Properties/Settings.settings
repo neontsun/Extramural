@@ -5,5 +5,8 @@
     <Setting Name="ConnectionPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="connect" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=@;</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -6,7 +6,7 @@ namespace ЗаочноеОтделение
     {
         // Переменная пути к базе данных на диске
         string path = string.Empty;
-
+        string connStr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=@;";
 
         /// <summary>
         /// Конструктор формы
@@ -38,6 +38,10 @@ namespace ЗаочноеОтделение
                     // Если была нажата кнопка ОК в окне
                     if (fd.ShowDialog() == DialogResult.OK)
                     {
+                        // Очищаем строку подключения строку подключения
+                        Properties.Settings.Default.connect = connStr;
+                        Properties.Settings.Default.Save();
+
                         // Записываем в переменную пути путь к выбранному файлу
                         path = fd.FileName;
                         // Записываем в лейбл путь
@@ -46,8 +50,25 @@ namespace ЗаочноеОтделение
                         // Сохраняем путь в переменную из параметров 
                         Properties.Settings.Default.ConnectionPath = path;
                         Properties.Settings.Default.Save();
+
+                        // Сохраняем строку подключения
+                        Properties.Settings.Default.connect = Properties.Settings.Default.connect.Replace("@", path);
+                        Properties.Settings.Default.Save();
                     }
                 }
+            };
+
+            // Событие при клике на "Очистить"
+            clearPath.Click += (f, a) => 
+            {
+                // Очищаем строку подключения строку подключения
+                Properties.Settings.Default.ConnectionPath = string.Empty;
+                // Очищаем строку подключения строку подключения
+                Properties.Settings.Default.connect = connStr;
+                // Сохраняем
+                Properties.Settings.Default.Save();
+                // Ставим путь
+                location.Text = "Не выбрано";
             };
         }
     }

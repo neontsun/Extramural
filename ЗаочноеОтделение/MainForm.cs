@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ЗаочноеОтделение.MoveDataTabs;
 using ЗаочноеОтделение.OzenkiDataTabs;
 using ЗаочноеОтделение.SelfDataTabs;
 using ЗаочноеОтделение.SelfDataTabs.Groups;
@@ -160,6 +162,18 @@ namespace ЗаочноеОтделение
             moveTabToolsSeparatorHorizontal.Width = tabs.Width;
             // Меняем размер разделителя у таблицы
             moveTabDataTableSeparator.Width = tabs.Width - 27;
+            
+            // Событие клика по кнопке "Добавить запись"
+            moveTabCreateNote.Click += (f, a) => new AddMoveData().ShowDialog();
+            // Событие клика по кнопке "Редактировать запись"
+            moveTabEditNote.Click += (f, a) => new EditMoveData().ShowDialog();
+            // Событие клика по кнопке "Фильтр выборки"
+            moveTabFilter.Click += (f, a) => new FilterMoveData().ShowDialog();
+            // Событие при клике на кнопку "Сбросить фильтр"
+            moveTabFilterClear.Click += (f, a) =>
+            {
+                MessageBox.Show("Фильтр сброшен");
+            };
         }
 
         #endregion
@@ -185,15 +199,162 @@ namespace ЗаочноеОтделение
             topMenu.Items[1].Click += (f, a) => new Settings().ShowDialog();
 
             // Создаем вкладку "Личные данные"
-            CreateSelfDataTab();
+            this.CreateSelfDataTab();
             // Создаем вкладку "Успеваемость"
-            CreateOzenkiTab();
+            this.CreateOzenkiTab();
             // Создаем вкладку "Предметы"
-            CreateSubjectTab();
+            this.CreateSubjectTab();
             // Создаем вкладку "Дипломный проект"
-            CreateDiplomTab();
+            this.CreateDiplomTab();
             // Создаем вкладку "Движение"
-            CreateMoveTab();
+            this.CreateMoveTab();
+
+            // Событие при смене вкладки
+            tabs.SelectedIndexChanged += (f, a) => 
+            {
+                // Проверяем индекс вкладки
+                switch (tabs.SelectedIndex)
+                {
+                    case 0: this.LoadDataInSelfDataTable(); break;
+                    case 1: this.LoadDataInOzenkiDataTable(); break;
+                    case 2: break;
+                    case 3: break;
+                    case 4: break;
+                }
+            };
+
+            // Событие при загрузке формы
+            this.Load += (f, a) => 
+            {
+                //MessageBox.Show(Properties.Settings.Default.connect);
+
+                // Так как изначально у нас главная вкладка - Личные данные,
+                // то при запуске программы заполняем таблицу на данной вкладке
+                this.LoadDataInSelfDataTable();
+            };
+        }
+
+
+
+
+        /// <summary>
+        /// Метод, который подкгружает данные во вкладку selfTab
+        /// </summary>
+        internal void LoadDataInSelfDataTable()
+        {
+            // Цвета строки
+            var goodColor = Color.FromArgb(160, 235, 176);
+            var neutralColor = Color.FromArgb(186, 186, 186);
+            var badColor = Color.FromArgb(51, 54, 51);
+
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Создаем запрос к бд
+                    cmd.CommandText = "SELECT [Шифр]," +
+                                      "       [НомерГруппы]," +
+                                      "       [ФИО]," +
+                                      "       [Пол]," +
+                                      "       [ДатаРождения]," +
+                                      "       [ДомашнийАдрес]," +
+                                      "       [Телефон]," +
+                                      "       [МестоРаботы]," +
+                                      "       [ИзучаемыйЯзык]," +
+                                      "       [Образование]," +
+                                      "       [Статус] " +
+                                      "FROM [Личные данные] " +
+                                      "INNER JOIN [Группы] ON [Личные данные].[КодГруппы] = [Группы].[Код]";
+
+                    // Получаем данные из бд
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        // Очищаем таблицу
+                        selfTabDataTable.Items.Clear();
+
+                        // Пока идет чтение построчно
+                        while (reader.Read())
+                        {
+                            // Добавляем строку
+                            ListViewItem item = new ListViewItem(reader[0].ToString());
+                            item.SubItems.Add(reader[1].ToString());
+                            item.SubItems.Add(reader[2].ToString());
+                            item.SubItems.Add(reader[3].ToString());
+                            item.SubItems.Add(reader[4].ToString());
+                            item.SubItems.Add(reader[5].ToString());
+                            item.SubItems.Add(reader[6].ToString());
+                            item.SubItems.Add(reader[7].ToString());
+                            item.SubItems.Add(reader[8].ToString());
+                            item.SubItems.Add(reader[9].ToString());
+                            item.SubItems.Add(reader[10].ToString());
+                            item.BackColor = badColor;
+                            if (reader[10].ToString() == "Отчислен")
+                                item.ForeColor = Color.White;
+                            
+                            selfTabDataTable.Items.Add(item);
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Метод, который подкгружает данные во вкладку ozenkiTab
+        /// </summary>
+        internal void LoadDataInOzenkiDataTable()
+        {
+            // Цвета строки
+            var goodColor = Color.FromArgb(160, 235, 176);
+            var neutralColor = Color.FromArgb(186, 186, 186);
+            var badColor = Color.FromArgb(51, 54, 51);
+
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Создаем запрос к бд
+                    cmd.CommandText = "SELECT [Шифр]," +
+                                      "       [Курс]," +
+                                      "       [НаименованиеПредмета]," +
+                                      "       [Оценка]," +
+                                      "       [Успеваемость].[Статус]," +
+                                      "       [Дата] " +
+                                      "FROM [Успеваемость] " +
+                                      "INNER JOIN [Предметы] ON [Успеваемость].[КодПредмета] = [Предметы].[КодПредмета]";
+
+                    // Получаем данные из бд
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        // Очищаем таблицу
+                        ozenkiTabDataTable.Items.Clear();
+
+                        // Пока идет чтение построчно
+                        while (reader.Read())
+                        {
+                            // Добавляем строку
+                            ListViewItem item = new ListViewItem(reader[0].ToString());
+                            item.SubItems.Add(reader[1].ToString());
+                            item.SubItems.Add(reader[2].ToString());
+                            item.SubItems.Add(reader[3].ToString());
+                            item.SubItems.Add(reader[4].ToString());
+                            item.SubItems.Add(reader[5].ToString());
+                            item.BackColor = goodColor;
+                            //if (reader[10].ToString() == "Отчислен")
+                            //    item.ForeColor = Color.White;
+
+                            ozenkiTabDataTable.Items.Add(item);
+                        }
+                    }
+                }
+            }
         }
     }
 }

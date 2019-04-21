@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Тест");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Тест");
             this.tabs = new System.Windows.Forms.TabControl();
             this.selfTab = new System.Windows.Forms.TabPage();
+            this.selfTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.selfTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.selfTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.selfTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
@@ -47,6 +46,7 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ozenkiTab = new System.Windows.Forms.TabPage();
+            this.ozenkiTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.ozenkiTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.ozenkiTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.ozenkiTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
@@ -57,40 +57,38 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.moveTab = new System.Windows.Forms.TabPage();
+            this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
             this.moveTabDataTable = new System.Windows.Forms.ListView();
-            this.subjectTab = new System.Windows.Forms.TabPage();
-            this.subjectTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
-            this.subjectTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
-            this.subjectTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
-            this.subjectTabDataTable = new System.Windows.Forms.ListView();
-            this.diplomTab = new System.Windows.Forms.TabPage();
-            this.diplomTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
-            this.diplomTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
-            this.diplomTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
-            this.diplomTabDataTable = new System.Windows.Forms.ListView();
-            this.topMenu = new System.Windows.Forms.MenuStrip();
-            this.Reports = new System.Windows.Forms.ToolStripMenuItem();
-            this.Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.subjectTab = new System.Windows.Forms.TabPage();
+            this.subjectTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.subjectTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
+            this.subjectTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
+            this.subjectTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.subjectTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.diplomTab = new System.Windows.Forms.TabPage();
+            this.diplomTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.diplomTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
+            this.diplomTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
+            this.diplomTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.diplomTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.selfTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.ozenkiTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.subjectTabDataTableSeparator = new System.Windows.Forms.Panel();
-            this.diplomTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.topMenu = new System.Windows.Forms.MenuStrip();
+            this.Reports = new System.Windows.Forms.ToolStripMenuItem();
+            this.Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.selfTabShowGroups = new System.Windows.Forms.Button();
             this.selfTabEditNote = new System.Windows.Forms.Button();
             this.selfTabFilterClear = new System.Windows.Forms.Button();
@@ -115,6 +113,8 @@
             this.diplomTabFilterClear = new System.Windows.Forms.Button();
             this.diplomTabFilter = new System.Windows.Forms.Button();
             this.diplomTabCreateNote = new System.Windows.Forms.Button();
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabs.SuspendLayout();
             this.selfTab.SuspendLayout();
             this.ozenkiTab.SuspendLayout();
@@ -158,6 +158,14 @@
             this.selfTab.Text = "Личные данные";
             this.selfTab.UseVisualStyleBackColor = true;
             // 
+            // selfTabDataTableSeparator
+            // 
+            this.selfTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.selfTabDataTableSeparator.Location = new System.Drawing.Point(9, 121);
+            this.selfTabDataTableSeparator.Name = "selfTabDataTableSeparator";
+            this.selfTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.selfTabDataTableSeparator.TabIndex = 18;
+            // 
             // selfTabToolsSeparatorVertical2
             // 
             this.selfTabToolsSeparatorVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -187,6 +195,7 @@
             this.selfTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.selfTabDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
+            this.columnHeader28,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
@@ -199,10 +208,6 @@
             this.selfTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selfTabDataTable.FullRowSelect = true;
             this.selfTabDataTable.GridLines = true;
-            listViewItem1.Checked = true;
-            listViewItem1.StateImageIndex = 1;
-            this.selfTabDataTable.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.selfTabDataTable.LabelEdit = true;
             this.selfTabDataTable.Location = new System.Drawing.Point(8, 96);
             this.selfTabDataTable.Name = "selfTabDataTable";
@@ -219,55 +224,46 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "ФИО";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 221;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Пол";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 113;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Дата рождения";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 149;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Домашний адрес";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader5.Width = 199;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Телефон";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader6.Width = 138;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Место работы";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader7.Width = 176;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Изучаемый язык";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader8.Width = 152;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Образование";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader9.Width = 155;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Статус";
-            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader10.Width = 98;
             // 
             // ozenkiTab
@@ -288,6 +284,14 @@
             this.ozenkiTab.TabIndex = 1;
             this.ozenkiTab.Text = "Успеваемость";
             this.ozenkiTab.UseVisualStyleBackColor = true;
+            // 
+            // ozenkiTabDataTableSeparator
+            // 
+            this.ozenkiTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ozenkiTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.ozenkiTabDataTableSeparator.Name = "ozenkiTabDataTableSeparator";
+            this.ozenkiTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.ozenkiTabDataTableSeparator.TabIndex = 19;
             // 
             // ozenkiTabToolsSeparatorVertical2
             // 
@@ -321,12 +325,11 @@
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14,
-            this.columnHeader15});
+            this.columnHeader15,
+            this.columnHeader29});
             this.ozenkiTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ozenkiTabDataTable.FullRowSelect = true;
             this.ozenkiTabDataTable.GridLines = true;
-            this.ozenkiTabDataTable.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
             this.ozenkiTabDataTable.Location = new System.Drawing.Point(8, 96);
             this.ozenkiTabDataTable.Name = "ozenkiTabDataTable";
             this.ozenkiTabDataTable.Size = new System.Drawing.Size(1134, 486);
@@ -342,25 +345,21 @@
             // columnHeader12
             // 
             this.columnHeader12.Text = "Курс";
-            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader12.Width = 107;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "Предмет";
-            this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader13.Width = 341;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Оценка";
-            this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader14.Width = 104;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "Статус";
-            this.columnHeader15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader15.Width = 230;
             // 
             // moveTab
@@ -380,6 +379,14 @@
             this.moveTab.TabIndex = 5;
             this.moveTab.Text = "Движение";
             this.moveTab.UseVisualStyleBackColor = true;
+            // 
+            // moveTabDataTableSeparator
+            // 
+            this.moveTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.moveTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.moveTabDataTableSeparator.Name = "moveTabDataTableSeparator";
+            this.moveTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.moveTabDataTableSeparator.TabIndex = 19;
             // 
             // moveTabToolsSeparatorVertical2
             // 
@@ -425,6 +432,36 @@
             this.moveTabDataTable.UseCompatibleStateImageBehavior = false;
             this.moveTabDataTable.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Шифр";
+            this.columnHeader16.Width = 99;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Учебный год";
+            this.columnHeader17.Width = 161;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Курс";
+            this.columnHeader18.Width = 95;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Номер приказа";
+            this.columnHeader19.Width = 248;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Дата приказа";
+            this.columnHeader20.Width = 178;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Статус";
+            this.columnHeader21.Width = 183;
+            // 
             // subjectTab
             // 
             this.subjectTab.Controls.Add(this.subjectTabDataTableSeparator);
@@ -444,6 +481,14 @@
             this.subjectTab.TabIndex = 2;
             this.subjectTab.Text = "Предметы";
             this.subjectTab.UseVisualStyleBackColor = true;
+            // 
+            // subjectTabDataTableSeparator
+            // 
+            this.subjectTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.subjectTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.subjectTabDataTableSeparator.Name = "subjectTabDataTableSeparator";
+            this.subjectTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.subjectTabDataTableSeparator.TabIndex = 19;
             // 
             // subjectTabToolsSeparatorVertical2
             // 
@@ -487,6 +532,26 @@
             this.subjectTabDataTable.UseCompatibleStateImageBehavior = false;
             this.subjectTabDataTable.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Наименование предмета";
+            this.columnHeader22.Width = 316;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Количество часов";
+            this.columnHeader23.Width = 183;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Преподаватель";
+            this.columnHeader24.Width = 225;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Статус";
+            this.columnHeader25.Width = 188;
+            // 
             // diplomTab
             // 
             this.diplomTab.Controls.Add(this.diplomTabDataTableSeparator);
@@ -505,6 +570,14 @@
             this.diplomTab.TabIndex = 4;
             this.diplomTab.Text = "Дипломный проект";
             this.diplomTab.UseVisualStyleBackColor = true;
+            // 
+            // diplomTabDataTableSeparator
+            // 
+            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
+            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.diplomTabDataTableSeparator.TabIndex = 20;
             // 
             // diplomTabToolsSeparatorVertical2
             // 
@@ -546,6 +619,16 @@
             this.diplomTabDataTable.UseCompatibleStateImageBehavior = false;
             this.diplomTabDataTable.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Тема проекта";
+            this.columnHeader26.Width = 285;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Руководитель";
+            this.columnHeader27.Width = 204;
+            // 
             // topMenu
             // 
             this.topMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -569,115 +652,6 @@
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(92, 21);
             this.Settings.Text = "Настройки";
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Шифр";
-            this.columnHeader16.Width = 99;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Учебный год";
-            this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader17.Width = 161;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Курс";
-            this.columnHeader18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader18.Width = 95;
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Номер приказа";
-            this.columnHeader19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader19.Width = 248;
-            // 
-            // columnHeader20
-            // 
-            this.columnHeader20.Text = "Дата приказа";
-            this.columnHeader20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader20.Width = 178;
-            // 
-            // columnHeader21
-            // 
-            this.columnHeader21.Text = "Статус";
-            this.columnHeader21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader21.Width = 183;
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "Наименование предмета";
-            this.columnHeader22.Width = 316;
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "Количество часов";
-            this.columnHeader23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader23.Width = 183;
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "Преподаватель";
-            this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader24.Width = 225;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "Статус";
-            this.columnHeader25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader25.Width = 188;
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "Тема проекта";
-            this.columnHeader26.Width = 285;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Руководитель";
-            this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader27.Width = 204;
-            // 
-            // selfTabDataTableSeparator
-            // 
-            this.selfTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.selfTabDataTableSeparator.Location = new System.Drawing.Point(9, 121);
-            this.selfTabDataTableSeparator.Name = "selfTabDataTableSeparator";
-            this.selfTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.selfTabDataTableSeparator.TabIndex = 18;
-            // 
-            // ozenkiTabDataTableSeparator
-            // 
-            this.ozenkiTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ozenkiTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.ozenkiTabDataTableSeparator.Name = "ozenkiTabDataTableSeparator";
-            this.ozenkiTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.ozenkiTabDataTableSeparator.TabIndex = 19;
-            // 
-            // moveTabDataTableSeparator
-            // 
-            this.moveTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.moveTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.moveTabDataTableSeparator.Name = "moveTabDataTableSeparator";
-            this.moveTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.moveTabDataTableSeparator.TabIndex = 19;
-            // 
-            // subjectTabDataTableSeparator
-            // 
-            this.subjectTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.subjectTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.subjectTabDataTableSeparator.Name = "subjectTabDataTableSeparator";
-            this.subjectTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.subjectTabDataTableSeparator.TabIndex = 19;
-            // 
-            // diplomTabDataTableSeparator
-            // 
-            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
-            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.diplomTabDataTableSeparator.TabIndex = 20;
             // 
             // selfTabShowGroups
             // 
@@ -1047,6 +1021,15 @@
             this.diplomTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.diplomTabCreateNote.UseVisualStyleBackColor = true;
             // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Группа";
+            this.columnHeader28.Width = 108;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Дата";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1159,6 +1142,8 @@
         private System.Windows.Forms.Panel moveTabDataTableSeparator;
         private System.Windows.Forms.Panel subjectTabDataTableSeparator;
         private System.Windows.Forms.Panel diplomTabDataTableSeparator;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.ColumnHeader columnHeader29;
     }
 }
 

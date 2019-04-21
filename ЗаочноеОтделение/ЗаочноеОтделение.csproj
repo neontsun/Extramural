@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MoveDataTabs\AddMoveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveDataTabs\AddMoveData.Designer.cs">
+      <DependentUpon>AddMoveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveDataTabs\EditMoveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveDataTabs\EditMoveData.Designer.cs">
+      <DependentUpon>EditMoveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveDataTabs\FilterMoveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveDataTabs\FilterMoveData.Designer.cs">
+      <DependentUpon>FilterMoveData.cs</DependentUpon>
+    </Compile>
     <Compile Include="OzenkiDataTabs\AddOzenkiData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,15 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MoveDataTabs\AddMoveData.resx">
+      <DependentUpon>AddMoveData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataTabs\EditMoveData.resx">
+      <DependentUpon>EditMoveData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataTabs\FilterMoveData.resx">
+      <DependentUpon>FilterMoveData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OzenkiDataTabs\AddOzenkiData.resx">
       <DependentUpon>AddOzenkiData.cs</DependentUpon>
     </EmbeddedResource>

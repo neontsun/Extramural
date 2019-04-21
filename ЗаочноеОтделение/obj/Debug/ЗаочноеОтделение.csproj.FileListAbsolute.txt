@@ -23,3 +23,6 @@ C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтдел
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.OzenkiDataTabs.AddOzenkiData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.OzenkiDataTabs.EditOzenkiData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.OzenkiDataTabs.FilterOzenkiData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.AddMoveData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.EditMoveData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.FilterMoveData.resources

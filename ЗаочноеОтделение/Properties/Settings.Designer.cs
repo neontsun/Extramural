@@ -34,5 +34,17 @@ namespace ЗаочноеОтделение.Properties {
                 this["ConnectionPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=@;")]
+        public string connect {
+            get {
+                return ((string)(this["connect"]));
+            }
+            set {
+                this["connect"] = value;
+            }
+        }
     }
 }
