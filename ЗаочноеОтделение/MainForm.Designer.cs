@@ -31,11 +31,17 @@
             this.tabs = new System.Windows.Forms.TabControl();
             this.selfTab = new System.Windows.Forms.TabPage();
             this.selfTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.selfTabShowGroups = new System.Windows.Forms.Button();
             this.selfTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.selfTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.selfTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.selfTabEditNote = new System.Windows.Forms.Button();
+            this.selfTabFilterClear = new System.Windows.Forms.Button();
+            this.selfTabCreateNote = new System.Windows.Forms.Button();
+            this.selfTabFilter = new System.Windows.Forms.Button();
             this.selfTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,17 +56,26 @@
             this.ozenkiTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.ozenkiTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.ozenkiTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.ozenkiTabEditNote = new System.Windows.Forms.Button();
+            this.ozenkiTabFilterClear = new System.Windows.Forms.Button();
+            this.ozenkiTabFilter = new System.Windows.Forms.Button();
+            this.ozenkiTabCreateNote = new System.Windows.Forms.Button();
             this.ozenkiTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.moveTab = new System.Windows.Forms.TabPage();
             this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.moveTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.moveTabEditNote = new System.Windows.Forms.Button();
+            this.moveTabFilterClear = new System.Windows.Forms.Button();
+            this.moveTabFilter = new System.Windows.Forms.Button();
+            this.moveTabCreateNote = new System.Windows.Forms.Button();
             this.moveTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,6 +88,12 @@
             this.subjectTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.subjectTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.subjectTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.subjectTabShowSubjectInCourse = new System.Windows.Forms.Button();
+            this.subjectTabShowTeacher = new System.Windows.Forms.Button();
+            this.subjectTabEditNote = new System.Windows.Forms.Button();
+            this.subjectTabFilterClear = new System.Windows.Forms.Button();
+            this.subjectTabFilter = new System.Windows.Forms.Button();
+            this.subjectTabCreateNote = new System.Windows.Forms.Button();
             this.subjectTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -83,38 +104,18 @@
             this.diplomTabToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.diplomTabToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.diplomTabToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
+            this.diplomTabShowTeacher = new System.Windows.Forms.Button();
+            this.diplomTabEditNote = new System.Windows.Forms.Button();
+            this.diplomTabFilterClear = new System.Windows.Forms.Button();
+            this.diplomTabFilter = new System.Windows.Forms.Button();
+            this.diplomTabCreateNote = new System.Windows.Forms.Button();
             this.diplomTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topMenu = new System.Windows.Forms.MenuStrip();
             this.Reports = new System.Windows.Forms.ToolStripMenuItem();
             this.Settings = new System.Windows.Forms.ToolStripMenuItem();
-            this.selfTabShowGroups = new System.Windows.Forms.Button();
-            this.selfTabEditNote = new System.Windows.Forms.Button();
-            this.selfTabFilterClear = new System.Windows.Forms.Button();
-            this.selfTabCreateNote = new System.Windows.Forms.Button();
-            this.selfTabFilter = new System.Windows.Forms.Button();
-            this.ozenkiTabEditNote = new System.Windows.Forms.Button();
-            this.ozenkiTabFilterClear = new System.Windows.Forms.Button();
-            this.ozenkiTabFilter = new System.Windows.Forms.Button();
-            this.ozenkiTabCreateNote = new System.Windows.Forms.Button();
-            this.moveTabEditNote = new System.Windows.Forms.Button();
-            this.moveTabFilterClear = new System.Windows.Forms.Button();
-            this.moveTabFilter = new System.Windows.Forms.Button();
-            this.moveTabCreateNote = new System.Windows.Forms.Button();
-            this.subjectTabShowSubjectInCourse = new System.Windows.Forms.Button();
-            this.subjectTabShowTeacher = new System.Windows.Forms.Button();
-            this.subjectTabEditNote = new System.Windows.Forms.Button();
-            this.subjectTabFilterClear = new System.Windows.Forms.Button();
-            this.subjectTabFilter = new System.Windows.Forms.Button();
-            this.subjectTabCreateNote = new System.Windows.Forms.Button();
-            this.diplomTabShowTeacher = new System.Windows.Forms.Button();
-            this.diplomTabEditNote = new System.Windows.Forms.Button();
-            this.diplomTabFilterClear = new System.Windows.Forms.Button();
-            this.diplomTabFilter = new System.Windows.Forms.Button();
-            this.diplomTabCreateNote = new System.Windows.Forms.Button();
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabs.SuspendLayout();
             this.selfTab.SuspendLayout();
             this.ozenkiTab.SuspendLayout();
@@ -166,6 +167,22 @@
             this.selfTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
             this.selfTabDataTableSeparator.TabIndex = 18;
             // 
+            // selfTabShowGroups
+            // 
+            this.selfTabShowGroups.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selfTabShowGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selfTabShowGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selfTabShowGroups.Image = global::ЗаочноеОтделение.Properties.Resources.showGroups;
+            this.selfTabShowGroups.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.selfTabShowGroups.Location = new System.Drawing.Point(9, 588);
+            this.selfTabShowGroups.Name = "selfTabShowGroups";
+            this.selfTabShowGroups.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.selfTabShowGroups.Size = new System.Drawing.Size(193, 35);
+            this.selfTabShowGroups.TabIndex = 17;
+            this.selfTabShowGroups.Text = "Показать группы";
+            this.selfTabShowGroups.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.selfTabShowGroups.UseVisualStyleBackColor = true;
+            // 
             // selfTabToolsSeparatorVertical2
             // 
             this.selfTabToolsSeparatorVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -189,6 +206,66 @@
             this.selfTabToolsSeparatorHorizontal.Name = "selfTabToolsSeparatorHorizontal";
             this.selfTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
             this.selfTabToolsSeparatorHorizontal.TabIndex = 2;
+            // 
+            // selfTabEditNote
+            // 
+            this.selfTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selfTabEditNote.FlatAppearance.BorderSize = 0;
+            this.selfTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selfTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.selfTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.selfTabEditNote.Location = new System.Drawing.Point(549, 8);
+            this.selfTabEditNote.Name = "selfTabEditNote";
+            this.selfTabEditNote.Size = new System.Drawing.Size(187, 28);
+            this.selfTabEditNote.TabIndex = 1;
+            this.selfTabEditNote.Text = "Редактировать запись";
+            this.selfTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.selfTabEditNote.UseVisualStyleBackColor = true;
+            // 
+            // selfTabFilterClear
+            // 
+            this.selfTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selfTabFilterClear.FlatAppearance.BorderSize = 0;
+            this.selfTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selfTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
+            this.selfTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.selfTabFilterClear.Location = new System.Drawing.Point(352, 8);
+            this.selfTabFilterClear.Name = "selfTabFilterClear";
+            this.selfTabFilterClear.Size = new System.Drawing.Size(160, 28);
+            this.selfTabFilterClear.TabIndex = 1;
+            this.selfTabFilterClear.Text = "Сбросить фильтр";
+            this.selfTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.selfTabFilterClear.UseVisualStyleBackColor = true;
+            // 
+            // selfTabCreateNote
+            // 
+            this.selfTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selfTabCreateNote.FlatAppearance.BorderSize = 0;
+            this.selfTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selfTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
+            this.selfTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.selfTabCreateNote.Location = new System.Drawing.Point(8, 8);
+            this.selfTabCreateNote.Name = "selfTabCreateNote";
+            this.selfTabCreateNote.Size = new System.Drawing.Size(149, 28);
+            this.selfTabCreateNote.TabIndex = 1;
+            this.selfTabCreateNote.Text = "Добавить запись";
+            this.selfTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.selfTabCreateNote.UseVisualStyleBackColor = true;
+            // 
+            // selfTabFilter
+            // 
+            this.selfTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selfTabFilter.FlatAppearance.BorderSize = 0;
+            this.selfTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selfTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
+            this.selfTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.selfTabFilter.Location = new System.Drawing.Point(198, 8);
+            this.selfTabFilter.Name = "selfTabFilter";
+            this.selfTabFilter.Size = new System.Drawing.Size(143, 28);
+            this.selfTabFilter.TabIndex = 1;
+            this.selfTabFilter.Text = "Фильтр выборки";
+            this.selfTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.selfTabFilter.UseVisualStyleBackColor = true;
             // 
             // selfTabDataTable
             // 
@@ -220,6 +297,11 @@
             // 
             this.columnHeader1.Text = "Шифр";
             this.columnHeader1.Width = 93;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Группа";
+            this.columnHeader28.Width = 108;
             // 
             // columnHeader2
             // 
@@ -317,6 +399,67 @@
             this.ozenkiTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
             this.ozenkiTabToolsSeparatorHorizontal.TabIndex = 3;
             // 
+            // ozenkiTabEditNote
+            // 
+            this.ozenkiTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ozenkiTabEditNote.FlatAppearance.BorderSize = 0;
+            this.ozenkiTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ozenkiTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.ozenkiTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ozenkiTabEditNote.Location = new System.Drawing.Point(549, 8);
+            this.ozenkiTabEditNote.Name = "ozenkiTabEditNote";
+            this.ozenkiTabEditNote.Size = new System.Drawing.Size(187, 28);
+            this.ozenkiTabEditNote.TabIndex = 9;
+            this.ozenkiTabEditNote.Text = "Редактировать запись";
+            this.ozenkiTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ozenkiTabEditNote.UseVisualStyleBackColor = true;
+            // 
+            // ozenkiTabFilterClear
+            // 
+            this.ozenkiTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ozenkiTabFilterClear.FlatAppearance.BorderSize = 0;
+            this.ozenkiTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ozenkiTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
+            this.ozenkiTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ozenkiTabFilterClear.Location = new System.Drawing.Point(352, 8);
+            this.ozenkiTabFilterClear.Name = "ozenkiTabFilterClear";
+            this.ozenkiTabFilterClear.Size = new System.Drawing.Size(160, 28);
+            this.ozenkiTabFilterClear.TabIndex = 7;
+            this.ozenkiTabFilterClear.Text = "Сбросить фильтр";
+            this.ozenkiTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ozenkiTabFilterClear.UseVisualStyleBackColor = true;
+            // 
+            // ozenkiTabFilter
+            // 
+            this.ozenkiTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ozenkiTabFilter.FlatAppearance.BorderSize = 0;
+            this.ozenkiTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ozenkiTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
+            this.ozenkiTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ozenkiTabFilter.Location = new System.Drawing.Point(198, 8);
+            this.ozenkiTabFilter.Name = "ozenkiTabFilter";
+            this.ozenkiTabFilter.Size = new System.Drawing.Size(143, 28);
+            this.ozenkiTabFilter.TabIndex = 6;
+            this.ozenkiTabFilter.Text = "Фильтр выборки";
+            this.ozenkiTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ozenkiTabFilter.UseVisualStyleBackColor = true;
+            // 
+            // ozenkiTabCreateNote
+            // 
+            this.ozenkiTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ozenkiTabCreateNote.FlatAppearance.BorderSize = 0;
+            this.ozenkiTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ozenkiTabCreateNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ozenkiTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
+            this.ozenkiTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ozenkiTabCreateNote.Location = new System.Drawing.Point(8, 8);
+            this.ozenkiTabCreateNote.Name = "ozenkiTabCreateNote";
+            this.ozenkiTabCreateNote.Size = new System.Drawing.Size(149, 28);
+            this.ozenkiTabCreateNote.TabIndex = 4;
+            this.ozenkiTabCreateNote.Text = "Добавить запись";
+            this.ozenkiTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ozenkiTabCreateNote.UseVisualStyleBackColor = true;
+            // 
             // ozenkiTabDataTable
             // 
             this.ozenkiTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -361,6 +504,11 @@
             // 
             this.columnHeader15.Text = "Статус";
             this.columnHeader15.Width = 230;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Дата";
+            this.columnHeader29.Width = 167;
             // 
             // moveTab
             // 
@@ -411,6 +559,67 @@
             this.moveTabToolsSeparatorHorizontal.Name = "moveTabToolsSeparatorHorizontal";
             this.moveTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
             this.moveTabToolsSeparatorHorizontal.TabIndex = 6;
+            // 
+            // moveTabEditNote
+            // 
+            this.moveTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moveTabEditNote.FlatAppearance.BorderSize = 0;
+            this.moveTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moveTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.moveTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.moveTabEditNote.Location = new System.Drawing.Point(549, 8);
+            this.moveTabEditNote.Name = "moveTabEditNote";
+            this.moveTabEditNote.Size = new System.Drawing.Size(187, 28);
+            this.moveTabEditNote.TabIndex = 15;
+            this.moveTabEditNote.Text = "Редактировать запись";
+            this.moveTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.moveTabEditNote.UseVisualStyleBackColor = true;
+            // 
+            // moveTabFilterClear
+            // 
+            this.moveTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moveTabFilterClear.FlatAppearance.BorderSize = 0;
+            this.moveTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moveTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
+            this.moveTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.moveTabFilterClear.Location = new System.Drawing.Point(352, 8);
+            this.moveTabFilterClear.Name = "moveTabFilterClear";
+            this.moveTabFilterClear.Size = new System.Drawing.Size(160, 28);
+            this.moveTabFilterClear.TabIndex = 14;
+            this.moveTabFilterClear.Text = "Сбросить фильтр";
+            this.moveTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.moveTabFilterClear.UseVisualStyleBackColor = true;
+            // 
+            // moveTabFilter
+            // 
+            this.moveTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moveTabFilter.FlatAppearance.BorderSize = 0;
+            this.moveTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moveTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
+            this.moveTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.moveTabFilter.Location = new System.Drawing.Point(198, 8);
+            this.moveTabFilter.Name = "moveTabFilter";
+            this.moveTabFilter.Size = new System.Drawing.Size(143, 28);
+            this.moveTabFilter.TabIndex = 13;
+            this.moveTabFilter.Text = "Фильтр выборки";
+            this.moveTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.moveTabFilter.UseVisualStyleBackColor = true;
+            // 
+            // moveTabCreateNote
+            // 
+            this.moveTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moveTabCreateNote.FlatAppearance.BorderSize = 0;
+            this.moveTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moveTabCreateNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.moveTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
+            this.moveTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.moveTabCreateNote.Location = new System.Drawing.Point(8, 8);
+            this.moveTabCreateNote.Name = "moveTabCreateNote";
+            this.moveTabCreateNote.Size = new System.Drawing.Size(149, 28);
+            this.moveTabCreateNote.TabIndex = 12;
+            this.moveTabCreateNote.Text = "Добавить запись";
+            this.moveTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.moveTabCreateNote.UseVisualStyleBackColor = true;
             // 
             // moveTabDataTable
             // 
@@ -514,343 +723,6 @@
             this.subjectTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
             this.subjectTabToolsSeparatorHorizontal.TabIndex = 4;
             // 
-            // subjectTabDataTable
-            // 
-            this.subjectTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.subjectTabDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25});
-            this.subjectTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.subjectTabDataTable.FullRowSelect = true;
-            this.subjectTabDataTable.GridLines = true;
-            this.subjectTabDataTable.Location = new System.Drawing.Point(8, 96);
-            this.subjectTabDataTable.Name = "subjectTabDataTable";
-            this.subjectTabDataTable.Size = new System.Drawing.Size(1134, 486);
-            this.subjectTabDataTable.TabIndex = 1;
-            this.subjectTabDataTable.UseCompatibleStateImageBehavior = false;
-            this.subjectTabDataTable.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "Наименование предмета";
-            this.columnHeader22.Width = 316;
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "Количество часов";
-            this.columnHeader23.Width = 183;
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "Преподаватель";
-            this.columnHeader24.Width = 225;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "Статус";
-            this.columnHeader25.Width = 188;
-            // 
-            // diplomTab
-            // 
-            this.diplomTab.Controls.Add(this.diplomTabDataTableSeparator);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical2);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical1);
-            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorHorizontal);
-            this.diplomTab.Controls.Add(this.diplomTabShowTeacher);
-            this.diplomTab.Controls.Add(this.diplomTabEditNote);
-            this.diplomTab.Controls.Add(this.diplomTabFilterClear);
-            this.diplomTab.Controls.Add(this.diplomTabFilter);
-            this.diplomTab.Controls.Add(this.diplomTabCreateNote);
-            this.diplomTab.Controls.Add(this.diplomTabDataTable);
-            this.diplomTab.Location = new System.Drawing.Point(4, 26);
-            this.diplomTab.Name = "diplomTab";
-            this.diplomTab.Size = new System.Drawing.Size(1348, 634);
-            this.diplomTab.TabIndex = 4;
-            this.diplomTab.Text = "Дипломный проект";
-            this.diplomTab.UseVisualStyleBackColor = true;
-            // 
-            // diplomTabDataTableSeparator
-            // 
-            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
-            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
-            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
-            this.diplomTabDataTableSeparator.TabIndex = 20;
-            // 
-            // diplomTabToolsSeparatorVertical2
-            // 
-            this.diplomTabToolsSeparatorVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabToolsSeparatorVertical2.Location = new System.Drawing.Point(528, 4);
-            this.diplomTabToolsSeparatorVertical2.Name = "diplomTabToolsSeparatorVertical2";
-            this.diplomTabToolsSeparatorVertical2.Size = new System.Drawing.Size(1, 33);
-            this.diplomTabToolsSeparatorVertical2.TabIndex = 11;
-            // 
-            // diplomTabToolsSeparatorVertical1
-            // 
-            this.diplomTabToolsSeparatorVertical1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabToolsSeparatorVertical1.Location = new System.Drawing.Point(172, 4);
-            this.diplomTabToolsSeparatorVertical1.Name = "diplomTabToolsSeparatorVertical1";
-            this.diplomTabToolsSeparatorVertical1.Size = new System.Drawing.Size(1, 33);
-            this.diplomTabToolsSeparatorVertical1.TabIndex = 8;
-            // 
-            // diplomTabToolsSeparatorHorizontal
-            // 
-            this.diplomTabToolsSeparatorHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diplomTabToolsSeparatorHorizontal.Location = new System.Drawing.Point(0, 41);
-            this.diplomTabToolsSeparatorHorizontal.Name = "diplomTabToolsSeparatorHorizontal";
-            this.diplomTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
-            this.diplomTabToolsSeparatorHorizontal.TabIndex = 6;
-            // 
-            // diplomTabDataTable
-            // 
-            this.diplomTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.diplomTabDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader26,
-            this.columnHeader27});
-            this.diplomTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.diplomTabDataTable.FullRowSelect = true;
-            this.diplomTabDataTable.GridLines = true;
-            this.diplomTabDataTable.Location = new System.Drawing.Point(8, 96);
-            this.diplomTabDataTable.Name = "diplomTabDataTable";
-            this.diplomTabDataTable.Size = new System.Drawing.Size(1134, 486);
-            this.diplomTabDataTable.TabIndex = 3;
-            this.diplomTabDataTable.UseCompatibleStateImageBehavior = false;
-            this.diplomTabDataTable.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "Тема проекта";
-            this.columnHeader26.Width = 285;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Руководитель";
-            this.columnHeader27.Width = 204;
-            // 
-            // topMenu
-            // 
-            this.topMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.topMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Reports,
-            this.Settings});
-            this.topMenu.Location = new System.Drawing.Point(0, 0);
-            this.topMenu.Name = "topMenu";
-            this.topMenu.Size = new System.Drawing.Size(1367, 25);
-            this.topMenu.TabIndex = 2;
-            this.topMenu.Text = "menuStrip1";
-            // 
-            // Reports
-            // 
-            this.Reports.Name = "Reports";
-            this.Reports.Size = new System.Drawing.Size(64, 21);
-            this.Reports.Text = "Отчеты";
-            // 
-            // Settings
-            // 
-            this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(92, 21);
-            this.Settings.Text = "Настройки";
-            // 
-            // selfTabShowGroups
-            // 
-            this.selfTabShowGroups.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selfTabShowGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selfTabShowGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selfTabShowGroups.Image = global::ЗаочноеОтделение.Properties.Resources.showGroups;
-            this.selfTabShowGroups.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.selfTabShowGroups.Location = new System.Drawing.Point(9, 588);
-            this.selfTabShowGroups.Name = "selfTabShowGroups";
-            this.selfTabShowGroups.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.selfTabShowGroups.Size = new System.Drawing.Size(193, 35);
-            this.selfTabShowGroups.TabIndex = 17;
-            this.selfTabShowGroups.Text = "Показать группы";
-            this.selfTabShowGroups.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.selfTabShowGroups.UseVisualStyleBackColor = true;
-            // 
-            // selfTabEditNote
-            // 
-            this.selfTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selfTabEditNote.FlatAppearance.BorderSize = 0;
-            this.selfTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selfTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
-            this.selfTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.selfTabEditNote.Location = new System.Drawing.Point(549, 8);
-            this.selfTabEditNote.Name = "selfTabEditNote";
-            this.selfTabEditNote.Size = new System.Drawing.Size(187, 28);
-            this.selfTabEditNote.TabIndex = 1;
-            this.selfTabEditNote.Text = "Редактировать запись";
-            this.selfTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.selfTabEditNote.UseVisualStyleBackColor = true;
-            // 
-            // selfTabFilterClear
-            // 
-            this.selfTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selfTabFilterClear.FlatAppearance.BorderSize = 0;
-            this.selfTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selfTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
-            this.selfTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.selfTabFilterClear.Location = new System.Drawing.Point(352, 8);
-            this.selfTabFilterClear.Name = "selfTabFilterClear";
-            this.selfTabFilterClear.Size = new System.Drawing.Size(160, 28);
-            this.selfTabFilterClear.TabIndex = 1;
-            this.selfTabFilterClear.Text = "Сбросить фильтр";
-            this.selfTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.selfTabFilterClear.UseVisualStyleBackColor = true;
-            // 
-            // selfTabCreateNote
-            // 
-            this.selfTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selfTabCreateNote.FlatAppearance.BorderSize = 0;
-            this.selfTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selfTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
-            this.selfTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.selfTabCreateNote.Location = new System.Drawing.Point(8, 8);
-            this.selfTabCreateNote.Name = "selfTabCreateNote";
-            this.selfTabCreateNote.Size = new System.Drawing.Size(149, 28);
-            this.selfTabCreateNote.TabIndex = 1;
-            this.selfTabCreateNote.Text = "Добавить запись";
-            this.selfTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.selfTabCreateNote.UseVisualStyleBackColor = true;
-            // 
-            // selfTabFilter
-            // 
-            this.selfTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selfTabFilter.FlatAppearance.BorderSize = 0;
-            this.selfTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selfTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
-            this.selfTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.selfTabFilter.Location = new System.Drawing.Point(198, 8);
-            this.selfTabFilter.Name = "selfTabFilter";
-            this.selfTabFilter.Size = new System.Drawing.Size(143, 28);
-            this.selfTabFilter.TabIndex = 1;
-            this.selfTabFilter.Text = "Фильтр выборки";
-            this.selfTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.selfTabFilter.UseVisualStyleBackColor = true;
-            // 
-            // ozenkiTabEditNote
-            // 
-            this.ozenkiTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ozenkiTabEditNote.FlatAppearance.BorderSize = 0;
-            this.ozenkiTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ozenkiTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
-            this.ozenkiTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ozenkiTabEditNote.Location = new System.Drawing.Point(549, 8);
-            this.ozenkiTabEditNote.Name = "ozenkiTabEditNote";
-            this.ozenkiTabEditNote.Size = new System.Drawing.Size(187, 28);
-            this.ozenkiTabEditNote.TabIndex = 9;
-            this.ozenkiTabEditNote.Text = "Редактировать запись";
-            this.ozenkiTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ozenkiTabEditNote.UseVisualStyleBackColor = true;
-            // 
-            // ozenkiTabFilterClear
-            // 
-            this.ozenkiTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ozenkiTabFilterClear.FlatAppearance.BorderSize = 0;
-            this.ozenkiTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ozenkiTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
-            this.ozenkiTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ozenkiTabFilterClear.Location = new System.Drawing.Point(352, 8);
-            this.ozenkiTabFilterClear.Name = "ozenkiTabFilterClear";
-            this.ozenkiTabFilterClear.Size = new System.Drawing.Size(160, 28);
-            this.ozenkiTabFilterClear.TabIndex = 7;
-            this.ozenkiTabFilterClear.Text = "Сбросить фильтр";
-            this.ozenkiTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ozenkiTabFilterClear.UseVisualStyleBackColor = true;
-            // 
-            // ozenkiTabFilter
-            // 
-            this.ozenkiTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ozenkiTabFilter.FlatAppearance.BorderSize = 0;
-            this.ozenkiTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ozenkiTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
-            this.ozenkiTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ozenkiTabFilter.Location = new System.Drawing.Point(198, 8);
-            this.ozenkiTabFilter.Name = "ozenkiTabFilter";
-            this.ozenkiTabFilter.Size = new System.Drawing.Size(143, 28);
-            this.ozenkiTabFilter.TabIndex = 6;
-            this.ozenkiTabFilter.Text = "Фильтр выборки";
-            this.ozenkiTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ozenkiTabFilter.UseVisualStyleBackColor = true;
-            // 
-            // ozenkiTabCreateNote
-            // 
-            this.ozenkiTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ozenkiTabCreateNote.FlatAppearance.BorderSize = 0;
-            this.ozenkiTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ozenkiTabCreateNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ozenkiTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
-            this.ozenkiTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ozenkiTabCreateNote.Location = new System.Drawing.Point(8, 8);
-            this.ozenkiTabCreateNote.Name = "ozenkiTabCreateNote";
-            this.ozenkiTabCreateNote.Size = new System.Drawing.Size(149, 28);
-            this.ozenkiTabCreateNote.TabIndex = 4;
-            this.ozenkiTabCreateNote.Text = "Добавить запись";
-            this.ozenkiTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ozenkiTabCreateNote.UseVisualStyleBackColor = true;
-            // 
-            // moveTabEditNote
-            // 
-            this.moveTabEditNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moveTabEditNote.FlatAppearance.BorderSize = 0;
-            this.moveTabEditNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.moveTabEditNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
-            this.moveTabEditNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.moveTabEditNote.Location = new System.Drawing.Point(549, 8);
-            this.moveTabEditNote.Name = "moveTabEditNote";
-            this.moveTabEditNote.Size = new System.Drawing.Size(187, 28);
-            this.moveTabEditNote.TabIndex = 15;
-            this.moveTabEditNote.Text = "Редактировать запись";
-            this.moveTabEditNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.moveTabEditNote.UseVisualStyleBackColor = true;
-            // 
-            // moveTabFilterClear
-            // 
-            this.moveTabFilterClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moveTabFilterClear.FlatAppearance.BorderSize = 0;
-            this.moveTabFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.moveTabFilterClear.Image = global::ЗаочноеОтделение.Properties.Resources.filterClear;
-            this.moveTabFilterClear.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.moveTabFilterClear.Location = new System.Drawing.Point(352, 8);
-            this.moveTabFilterClear.Name = "moveTabFilterClear";
-            this.moveTabFilterClear.Size = new System.Drawing.Size(160, 28);
-            this.moveTabFilterClear.TabIndex = 14;
-            this.moveTabFilterClear.Text = "Сбросить фильтр";
-            this.moveTabFilterClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.moveTabFilterClear.UseVisualStyleBackColor = true;
-            // 
-            // moveTabFilter
-            // 
-            this.moveTabFilter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moveTabFilter.FlatAppearance.BorderSize = 0;
-            this.moveTabFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.moveTabFilter.Image = global::ЗаочноеОтделение.Properties.Resources.filter;
-            this.moveTabFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.moveTabFilter.Location = new System.Drawing.Point(198, 8);
-            this.moveTabFilter.Name = "moveTabFilter";
-            this.moveTabFilter.Size = new System.Drawing.Size(143, 28);
-            this.moveTabFilter.TabIndex = 13;
-            this.moveTabFilter.Text = "Фильтр выборки";
-            this.moveTabFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.moveTabFilter.UseVisualStyleBackColor = true;
-            // 
-            // moveTabCreateNote
-            // 
-            this.moveTabCreateNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moveTabCreateNote.FlatAppearance.BorderSize = 0;
-            this.moveTabCreateNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.moveTabCreateNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.moveTabCreateNote.Image = global::ЗаочноеОтделение.Properties.Resources.createNotes;
-            this.moveTabCreateNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.moveTabCreateNote.Location = new System.Drawing.Point(8, 8);
-            this.moveTabCreateNote.Name = "moveTabCreateNote";
-            this.moveTabCreateNote.Size = new System.Drawing.Size(149, 28);
-            this.moveTabCreateNote.TabIndex = 12;
-            this.moveTabCreateNote.Text = "Добавить запись";
-            this.moveTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.moveTabCreateNote.UseVisualStyleBackColor = true;
-            // 
             // subjectTabShowSubjectInCourse
             // 
             this.subjectTabShowSubjectInCourse.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -944,6 +816,95 @@
             this.subjectTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.subjectTabCreateNote.UseVisualStyleBackColor = true;
             // 
+            // subjectTabDataTable
+            // 
+            this.subjectTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.subjectTabDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
+            this.subjectTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.subjectTabDataTable.FullRowSelect = true;
+            this.subjectTabDataTable.GridLines = true;
+            this.subjectTabDataTable.Location = new System.Drawing.Point(8, 96);
+            this.subjectTabDataTable.Name = "subjectTabDataTable";
+            this.subjectTabDataTable.Size = new System.Drawing.Size(1134, 486);
+            this.subjectTabDataTable.TabIndex = 1;
+            this.subjectTabDataTable.UseCompatibleStateImageBehavior = false;
+            this.subjectTabDataTable.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Наименование предмета";
+            this.columnHeader22.Width = 316;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Количество часов";
+            this.columnHeader23.Width = 183;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Преподаватель";
+            this.columnHeader24.Width = 225;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Статус";
+            this.columnHeader25.Width = 188;
+            // 
+            // diplomTab
+            // 
+            this.diplomTab.Controls.Add(this.diplomTabDataTableSeparator);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical2);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorVertical1);
+            this.diplomTab.Controls.Add(this.diplomTabToolsSeparatorHorizontal);
+            this.diplomTab.Controls.Add(this.diplomTabShowTeacher);
+            this.diplomTab.Controls.Add(this.diplomTabEditNote);
+            this.diplomTab.Controls.Add(this.diplomTabFilterClear);
+            this.diplomTab.Controls.Add(this.diplomTabFilter);
+            this.diplomTab.Controls.Add(this.diplomTabCreateNote);
+            this.diplomTab.Controls.Add(this.diplomTabDataTable);
+            this.diplomTab.Location = new System.Drawing.Point(4, 26);
+            this.diplomTab.Name = "diplomTab";
+            this.diplomTab.Size = new System.Drawing.Size(1348, 634);
+            this.diplomTab.TabIndex = 4;
+            this.diplomTab.Text = "Дипломный проект";
+            this.diplomTab.UseVisualStyleBackColor = true;
+            // 
+            // diplomTabDataTableSeparator
+            // 
+            this.diplomTabDataTableSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabDataTableSeparator.Location = new System.Drawing.Point(9, 122);
+            this.diplomTabDataTableSeparator.Name = "diplomTabDataTableSeparator";
+            this.diplomTabDataTableSeparator.Size = new System.Drawing.Size(1148, 1);
+            this.diplomTabDataTableSeparator.TabIndex = 20;
+            // 
+            // diplomTabToolsSeparatorVertical2
+            // 
+            this.diplomTabToolsSeparatorVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabToolsSeparatorVertical2.Location = new System.Drawing.Point(528, 4);
+            this.diplomTabToolsSeparatorVertical2.Name = "diplomTabToolsSeparatorVertical2";
+            this.diplomTabToolsSeparatorVertical2.Size = new System.Drawing.Size(1, 33);
+            this.diplomTabToolsSeparatorVertical2.TabIndex = 11;
+            // 
+            // diplomTabToolsSeparatorVertical1
+            // 
+            this.diplomTabToolsSeparatorVertical1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabToolsSeparatorVertical1.Location = new System.Drawing.Point(172, 4);
+            this.diplomTabToolsSeparatorVertical1.Name = "diplomTabToolsSeparatorVertical1";
+            this.diplomTabToolsSeparatorVertical1.Size = new System.Drawing.Size(1, 33);
+            this.diplomTabToolsSeparatorVertical1.TabIndex = 8;
+            // 
+            // diplomTabToolsSeparatorHorizontal
+            // 
+            this.diplomTabToolsSeparatorHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.diplomTabToolsSeparatorHorizontal.Location = new System.Drawing.Point(0, 41);
+            this.diplomTabToolsSeparatorHorizontal.Name = "diplomTabToolsSeparatorHorizontal";
+            this.diplomTabToolsSeparatorHorizontal.Size = new System.Drawing.Size(1148, 1);
+            this.diplomTabToolsSeparatorHorizontal.TabIndex = 6;
+            // 
             // diplomTabShowTeacher
             // 
             this.diplomTabShowTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1021,14 +982,61 @@
             this.diplomTabCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.diplomTabCreateNote.UseVisualStyleBackColor = true;
             // 
-            // columnHeader28
+            // diplomTabDataTable
             // 
-            this.columnHeader28.Text = "Группа";
-            this.columnHeader28.Width = 108;
+            this.diplomTabDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.diplomTabDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader26,
+            this.columnHeader30,
+            this.columnHeader27});
+            this.diplomTabDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.diplomTabDataTable.FullRowSelect = true;
+            this.diplomTabDataTable.GridLines = true;
+            this.diplomTabDataTable.Location = new System.Drawing.Point(8, 96);
+            this.diplomTabDataTable.Name = "diplomTabDataTable";
+            this.diplomTabDataTable.Size = new System.Drawing.Size(1134, 486);
+            this.diplomTabDataTable.TabIndex = 3;
+            this.diplomTabDataTable.UseCompatibleStateImageBehavior = false;
+            this.diplomTabDataTable.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader29
+            // columnHeader26
             // 
-            this.columnHeader29.Text = "Дата";
+            this.columnHeader26.Text = "Тема проекта";
+            this.columnHeader26.Width = 285;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Руководитель";
+            this.columnHeader27.Width = 204;
+            // 
+            // topMenu
+            // 
+            this.topMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.topMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Reports,
+            this.Settings});
+            this.topMenu.Location = new System.Drawing.Point(0, 0);
+            this.topMenu.Name = "topMenu";
+            this.topMenu.Size = new System.Drawing.Size(1367, 25);
+            this.topMenu.TabIndex = 2;
+            this.topMenu.Text = "menuStrip1";
+            // 
+            // Reports
+            // 
+            this.Reports.Name = "Reports";
+            this.Reports.Size = new System.Drawing.Size(64, 21);
+            this.Reports.Text = "Отчеты";
+            // 
+            // Settings
+            // 
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(92, 21);
+            this.Settings.Text = "Настройки";
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Тема";
+            this.columnHeader30.Width = 221;
             // 
             // MainForm
             // 
@@ -1144,6 +1152,7 @@
         private System.Windows.Forms.Panel diplomTabDataTableSeparator;
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.ColumnHeader columnHeader29;
+        private System.Windows.Forms.ColumnHeader columnHeader30;
     }
 }
 

@@ -96,25 +96,21 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Код и название специальности";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader1.Width = 366;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Год поступления";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 190;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Год окончания";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 191;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Текущий курс";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 154;
             // 
             // groupsShowSpecialty

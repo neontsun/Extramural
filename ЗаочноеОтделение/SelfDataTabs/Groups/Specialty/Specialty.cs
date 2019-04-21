@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,56 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
             {
                 MessageBox.Show("Фильтр сброшен");
             };
+
+            // Событие при загрузке формы
+            this.Load += (f, a) => LoadDataInSpecialtyDataTable();
+        }
+
+
+        /// <summary>
+        /// Метод, который подкгружает данные в таблицу при загрузке формы
+        /// </summary>
+        internal void LoadDataInSpecialtyDataTable()
+        {
+            // Цвета строки
+            var goodColor = Color.FromArgb(160, 235, 176);
+            var neutralColor = Color.FromArgb(186, 186, 186);
+            var badColor = Color.FromArgb(51, 54, 51);
+
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Создаем запрос к бд
+                    cmd.CommandText = "SELECT [Специальность].[КодСпециальности], " +
+                                      "       [НаименованиеСпециальности] " +
+                                      "FROM [Специальность]";
+
+                    // Получаем данные из бд
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        // Очищаем таблицу
+                        specialtyDataTable.Items.Clear();
+
+                        // Пока идет чтение построчно
+                        while (reader.Read())
+                        {
+                            // Добавляем строку
+                            ListViewItem item = new ListViewItem(reader[0].ToString());
+                            item.SubItems.Add(reader[1].ToString());
+                            item.BackColor = goodColor;
+                            //if (reader[10].ToString() == "Отчислен")
+                            //    item.ForeColor = Color.White;
+
+                            specialtyDataTable.Items.Add(item);
+                        }
+                    }
+                }
+            }
         }
     }
 }
