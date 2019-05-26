@@ -111,11 +111,14 @@
             this.diplomTabCreateNote = new System.Windows.Forms.Button();
             this.diplomTabDataTable = new System.Windows.Forms.ListView();
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topMenu = new System.Windows.Forms.MenuStrip();
             this.Reports = new System.Windows.Forms.ToolStripMenuItem();
             this.Settings = new System.Windows.Forms.ToolStripMenuItem();
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.личнаяКарточкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дипломныйПроектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.общиеСведенияОСтудентеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs.SuspendLayout();
             this.selfTab.SuspendLayout();
             this.ozenkiTab.SuspendLayout();
@@ -1004,6 +1007,11 @@
             this.columnHeader26.Text = "Тема проекта";
             this.columnHeader26.Width = 285;
             // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Тема";
+            this.columnHeader30.Width = 221;
+            // 
             // columnHeader27
             // 
             this.columnHeader27.Text = "Руководитель";
@@ -1023,6 +1031,10 @@
             // 
             // Reports
             // 
+            this.Reports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.личнаяКарточкаToolStripMenuItem,
+            this.дипломныйПроектToolStripMenuItem,
+            this.общиеСведенияОСтудентеToolStripMenuItem});
             this.Reports.Name = "Reports";
             this.Reports.Size = new System.Drawing.Size(64, 21);
             this.Reports.Text = "Отчеты";
@@ -1033,10 +1045,23 @@
             this.Settings.Size = new System.Drawing.Size(92, 21);
             this.Settings.Text = "Настройки";
             // 
-            // columnHeader30
+            // личнаяКарточкаToolStripMenuItem
             // 
-            this.columnHeader30.Text = "Тема";
-            this.columnHeader30.Width = 221;
+            this.личнаяКарточкаToolStripMenuItem.Name = "личнаяКарточкаToolStripMenuItem";
+            this.личнаяКарточкаToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.личнаяКарточкаToolStripMenuItem.Text = "Личная карточка";
+            // 
+            // дипломныйПроектToolStripMenuItem
+            // 
+            this.дипломныйПроектToolStripMenuItem.Name = "дипломныйПроектToolStripMenuItem";
+            this.дипломныйПроектToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.дипломныйПроектToolStripMenuItem.Text = "Дипломный проект";
+            // 
+            // общиеСведенияОСтудентеToolStripMenuItem
+            // 
+            this.общиеСведенияОСтудентеToolStripMenuItem.Name = "общиеСведенияОСтудентеToolStripMenuItem";
+            this.общиеСведенияОСтудентеToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.общиеСведенияОСтудентеToolStripMenuItem.Text = "Общие сведения о студенте";
             // 
             // MainForm
             // 
@@ -1153,6 +1178,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.ColumnHeader columnHeader29;
         private System.Windows.Forms.ColumnHeader columnHeader30;
+        private System.Windows.Forms.ToolStripMenuItem личнаяКарточкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дипломныйПроектToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem общиеСведенияОСтудентеToolStripMenuItem;
     }
 }
 

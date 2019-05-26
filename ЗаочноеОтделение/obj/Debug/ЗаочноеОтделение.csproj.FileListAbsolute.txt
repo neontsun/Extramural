@@ -26,3 +26,4 @@ C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтдел
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.AddMoveData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.EditMoveData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.MoveDataTabs.FilterMoveData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.csproj.ResolveComReference.cache

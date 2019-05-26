@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using ЗаочноеОтделение.MoveDataTabs;
 using ЗаочноеОтделение.OzenkiDataTabs;
 using ЗаочноеОтделение.SelfDataTabs;
 using ЗаочноеОтделение.SelfDataTabs.Groups;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace ЗаочноеОтделение
 {
@@ -218,6 +214,32 @@ namespace ЗаочноеОтделение
             // создаем объект формы настроек и открываем ее
             topMenu.Items[1].Click += (f, a) => new Settings().ShowDialog();
 
+            // Формирование отчета "Личная карточка"
+            Reports.DropDownItems[0].Click += (f, a) => 
+            {
+                var template = Directory.GetCurrentDirectory()
+                .Remove(Directory.GetCurrentDirectory().Length - 10) + "\\Templates\\Личная карточка.doc";
+
+                var wA = new Word.Application();
+                wA.Visible = false;
+
+                var wordDoc = wA.Documents.Open(template);
+
+                try
+                {
+                    ReplaceWordStub("{student}", "Студент", wordDoc);
+                    ReplaceWordStub("{spec}", "Специальность", wordDoc);
+                    ReplaceWordStub("{group}", "Группа", wordDoc);
+
+                    wordDoc.SaveAs2(@"D:\\123.doc");
+                    wA.Visible = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Произошла ошибка");
+                }
+            };
+
             // Событие при смене вкладки
             tabs.SelectedIndexChanged += (f, a) =>
             {
@@ -231,7 +253,7 @@ namespace ЗаочноеОтделение
                     case 4: this.LoadDataInDiplomDataTable(); break;
                 }
             };
-
+            
             // Событие при загрузке формы
             this.Load += (f, a) =>
             {
@@ -249,6 +271,13 @@ namespace ЗаочноеОтделение
         }
 
 
+        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wd)
+        {
+            var range = wd.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
+            range.Underline = Word.WdUnderline.wdUnderlineSingle;
+        }
 
 
         /// <summary>
@@ -339,8 +368,8 @@ namespace ЗаочноеОтделение
                                       "       [Курс]," +
                                       "       [НаименованиеПредмета]," +
                                       "       [Оценка]," +
-                                      "       [Успеваемость].[Статус]," +
-                                      "       [Дата] " +
+                                      "       [НаличиеКР]," +
+                                      "       [ОценкаКР] " +
                                       "FROM [Успеваемость] " +
                                       "INNER JOIN [Предметы] ON [Успеваемость].[КодПредмета] = [Предметы].[КодПредмета]";
 
@@ -394,8 +423,7 @@ namespace ЗаочноеОтделение
                                       "       [УчебныйГод]," +
                                       "       [Курс]," +
                                       "       [НомерПриказа]," +
-                                      "       [ДатаПриказа]," +
-                                      "       [Движение].[Статус] " +
+                                      "       [ДатаПриказа] " +
                                       "FROM [Движение]";
 
                     // Получаем данные из бд
@@ -413,10 +441,7 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[2].ToString());
                             item.SubItems.Add(reader[3].ToString());
                             item.SubItems.Add(Convert.ToDateTime(reader[4]).ToShortDateString());
-                            item.SubItems.Add(reader[5].ToString());
                             item.BackColor = goodColor;
-                            //if (reader[10].ToString() == "Отчислен")
-                            //    item.ForeColor = Color.White;
 
                             moveTabDataTable.Items.Add(item);
                         }
@@ -447,7 +472,7 @@ namespace ЗаочноеОтделение
                     cmd.CommandText = "SELECT [НаименованиеПредмета]," +
                                       "       [КоличествоЧасов]," +
                                       "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.', " +
-                                      "       [Статус]" +
+                                      "       [Курс]" +
                                       "FROM [Предметы] " +
                                       "INNER JOIN [Преподаватели] ON [Преподаватели].[КодПреподавателя] = [Предметы].[КодПреподавателя]";
 
