@@ -215,30 +215,9 @@ namespace ЗаочноеОтделение
             topMenu.Items[1].Click += (f, a) => new Settings().ShowDialog();
 
             // Формирование отчета "Личная карточка"
-            Reports.DropDownItems[0].Click += (f, a) => 
-            {
-                var template = Directory.GetCurrentDirectory()
-                .Remove(Directory.GetCurrentDirectory().Length - 10) + "\\Templates\\Личная карточка.doc";
+            Reports.DropDownItems[0].Click += (f, a) => new ReportsForm.SelfCard().ShowDialog();
+            Reports.DropDownItems[1].Click += (f, a) => new ReportsForm.Diplom().ShowDialog();
 
-                var wA = new Word.Application();
-                wA.Visible = false;
-
-                var wordDoc = wA.Documents.Open(template);
-
-                try
-                {
-                    ReplaceWordStub("{student}", "Студент", wordDoc);
-                    ReplaceWordStub("{spec}", "Специальность", wordDoc);
-                    ReplaceWordStub("{group}", "Группа", wordDoc);
-
-                    wordDoc.SaveAs2(@"D:\\123.doc");
-                    wA.Visible = true;
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Произошла ошибка");
-                }
-            };
 
             // Событие при смене вкладки
             tabs.SelectedIndexChanged += (f, a) =>
@@ -268,15 +247,6 @@ namespace ЗаочноеОтделение
             };
 
             #endregion
-        }
-
-
-        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wd)
-        {
-            var range = wd.Content;
-            range.Find.ClearFormatting();
-            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
-            range.Underline = Word.WdUnderline.wdUnderlineSingle;
         }
 
 

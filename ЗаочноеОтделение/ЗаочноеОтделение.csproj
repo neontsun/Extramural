@@ -82,6 +82,18 @@
     <Compile Include="OzenkiDataTabs\FilterOzenkiData.Designer.cs">
       <DependentUpon>FilterOzenkiData.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportsForm\Diplom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm\Diplom.Designer.cs">
+      <DependentUpon>Diplom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsForm\SelfCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm\SelfCard.Designer.cs">
+      <DependentUpon>SelfCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelfDataTabs\AddSelfData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OzenkiDataTabs\FilterOzenkiData.resx">
       <DependentUpon>FilterOzenkiData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm\Diplom.resx">
+      <DependentUpon>Diplom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm\SelfCard.resx">
+      <DependentUpon>SelfCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelfDataTabs\AddSelfData.resx">
       <DependentUpon>AddSelfData.cs</DependentUpon>

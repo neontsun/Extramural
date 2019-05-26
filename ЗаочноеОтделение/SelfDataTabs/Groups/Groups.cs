@@ -81,8 +81,6 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                             ListViewItem item = new ListViewItem(reader[0].ToString());
                             item.SubItems.Add(reader[1].ToString());
                             item.SubItems.Add(reader[2].ToString());
-                            item.SubItems.Add(reader[3].ToString());
-                            item.SubItems.Add(reader[4].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
