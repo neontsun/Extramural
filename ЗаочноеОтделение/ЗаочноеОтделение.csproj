@@ -46,6 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateBase.cs" />
+    <Compile Include="DiplomDataTabs\AddDiplomData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiplomDataTabs\AddDiplomData.Designer.cs">
+      <DependentUpon>AddDiplomData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiplomDataTabs\EditDiplomData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiplomDataTabs\EditDiplomData.Designer.cs">
+      <DependentUpon>EditDiplomData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiplomDataTabs\FilterDiplomData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiplomDataTabs\FilterDiplomData.Designer.cs">
+      <DependentUpon>FilterDiplomData.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoveDataTabs\AddMoveData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +193,54 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubjectDataTabs\AddSubjectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\AddSubjectData.Designer.cs">
+      <DependentUpon>AddSubjectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\EditSubjectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\EditSubjectData.Designer.cs">
+      <DependentUpon>EditSubjectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\FilterSubjectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\FilterSubjectData.Designer.cs">
+      <DependentUpon>FilterSubjectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\AddPrepodData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\AddPrepodData.Designer.cs">
+      <DependentUpon>AddPrepodData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\EditPrepodData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\EditPrepodData.Designer.cs">
+      <DependentUpon>EditPrepodData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\FilterPrepodData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\FilterPrepodData.Designer.cs">
+      <DependentUpon>FilterPrepodData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\Prepod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectDataTabs\Prepod\Prepod.Designer.cs">
+      <DependentUpon>Prepod.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DiplomDataTabs\AddDiplomData.resx">
+      <DependentUpon>AddDiplomData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiplomDataTabs\EditDiplomData.resx">
+      <DependentUpon>EditDiplomData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataTabs\AddMoveData.resx">
       <DependentUpon>AddMoveData.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +314,18 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\AddSubjectData.resx">
+      <DependentUpon>AddSubjectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\EditSubjectData.resx">
+      <DependentUpon>EditSubjectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\Prepod\AddPrepodData.resx">
+      <DependentUpon>AddPrepodData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\Prepod\Prepod.resx">
+      <DependentUpon>Prepod.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -319,5 +398,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

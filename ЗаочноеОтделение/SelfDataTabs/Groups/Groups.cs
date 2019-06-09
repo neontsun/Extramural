@@ -23,18 +23,42 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
             InitializeComponent();
 
             // Клик по кнопке "Показать специальность"
-            groupsShowSpecialty.Click += (f, a) => new Specialty.Specialty().ShowDialog();
+            groupsShowSpecialty.Click += (f, a) => 
+            {
+                new Specialty.Specialty()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Клик по кнопке "Добавить запись"
-            groupsCreateNote.Click += (f, a) => new AddGroups().ShowDialog();
+            groupsCreateNote.Click += (f, a) => 
+            {
+                new AddGroups()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Клик по кнопке "Добавить запись"
-            groupsEditNote.Click += (f, a) => new EditGroups().ShowDialog();
+            groupsEditNote.Click += (f, a) => 
+            {
+                new EditGroups()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Клик по кнопке "Сбросить фильтр"
             groupsFilterClear.Click += (f, a) => 
             {
                 MessageBox.Show("Фильтр сброшен");
             };
             // Клик по кнопке "Фильтр"
-            groupsFilter.Click += (f, a) => new FilterGroups().ShowDialog();
+            groupsFilter.Click += (f, a) => 
+            {
+                new FilterGroups()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
 
 
             // Событие при загрузке формы

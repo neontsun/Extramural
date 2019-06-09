@@ -35,8 +35,6 @@
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupsShowSpecialty = new System.Windows.Forms.Button();
             this.groupsEditNote = new System.Windows.Forms.Button();
             this.groupsFilterClear = new System.Windows.Forms.Button();
@@ -75,9 +73,7 @@
             this.groupsDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader26,
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader2});
             this.groupsDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupsDataTable.FullRowSelect = true;
             this.groupsDataTable.GridLines = true;
@@ -102,16 +98,6 @@
             // 
             this.columnHeader2.Text = "Год поступления";
             this.columnHeader2.Width = 190;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Год окончания";
-            this.columnHeader3.Width = 191;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Текущий курс";
-            this.columnHeader4.Width = 154;
             // 
             // groupsShowSpecialty
             // 
@@ -240,8 +226,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button groupsShowSpecialty;
         private System.Windows.Forms.Panel panel1;
     }

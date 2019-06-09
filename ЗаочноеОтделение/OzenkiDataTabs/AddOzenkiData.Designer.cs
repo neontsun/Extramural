@@ -30,19 +30,19 @@
         {
             this.save = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.ozenkiStatus = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.ozenkiOzenka = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ozenkiCourse = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.sa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ozenkiChipher = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ozenkiSubject = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.thisIsKR = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // save
@@ -69,33 +69,10 @@
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
             // 
-            // ozenkiStatus
-            // 
-            this.ozenkiStatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ozenkiStatus.FormattingEnabled = true;
-            this.ozenkiStatus.Items.AddRange(new object[] {
-            "Отчислен",
-            "Выпущен",
-            "Обучается"});
-            this.ozenkiStatus.Location = new System.Drawing.Point(111, 221);
-            this.ozenkiStatus.Name = "ozenkiStatus";
-            this.ozenkiStatus.Size = new System.Drawing.Size(253, 28);
-            this.ozenkiStatus.TabIndex = 62;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(108, 189);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 18);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "Статус";
-            // 
             // ozenkiOzenka
             // 
             this.ozenkiOzenka.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ozenkiOzenka.Location = new System.Drawing.Point(493, 143);
+            this.ozenkiOzenka.Location = new System.Drawing.Point(114, 143);
             this.ozenkiOzenka.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.ozenkiOzenka.Name = "ozenkiOzenka";
             this.ozenkiOzenka.Size = new System.Drawing.Size(117, 26);
@@ -105,7 +82,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(488, 113);
+            this.label7.Location = new System.Drawing.Point(111, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 18);
             this.label7.TabIndex = 52;
@@ -114,27 +91,27 @@
             // ozenkiCourse
             // 
             this.ozenkiCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ozenkiCourse.Location = new System.Drawing.Point(493, 73);
+            this.ozenkiCourse.Location = new System.Drawing.Point(111, 217);
             this.ozenkiCourse.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.ozenkiCourse.Name = "ozenkiCourse";
             this.ozenkiCourse.Size = new System.Drawing.Size(117, 26);
             this.ozenkiCourse.TabIndex = 50;
             // 
-            // label6
+            // sa
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(488, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 18);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Курс";
+            this.sa.AutoSize = true;
+            this.sa.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sa.Location = new System.Drawing.Point(356, 116);
+            this.sa.Name = "sa";
+            this.sa.Size = new System.Drawing.Size(93, 18);
+            this.sa.TabIndex = 49;
+            this.sa.Text = "Наличие КР";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(108, 113);
+            this.label2.Location = new System.Drawing.Point(356, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
             this.label2.TabIndex = 37;
@@ -143,7 +120,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Location = new System.Drawing.Point(111, 134);
+            this.panel2.Location = new System.Drawing.Point(111, 137);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(498, 1);
             this.panel2.TabIndex = 36;
@@ -175,14 +152,6 @@
             this.panel1.Size = new System.Drawing.Size(498, 1);
             this.panel1.TabIndex = 33;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Location = new System.Drawing.Point(111, 210);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 1);
-            this.panel3.TabIndex = 65;
-            // 
             // ozenkiSubject
             // 
             this.ozenkiSubject.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -191,10 +160,38 @@
             "Отчислен",
             "Выпущен",
             "Обучается"});
-            this.ozenkiSubject.Location = new System.Drawing.Point(111, 143);
+            this.ozenkiSubject.Location = new System.Drawing.Point(359, 71);
             this.ozenkiSubject.Name = "ozenkiSubject";
             this.ozenkiSubject.Size = new System.Drawing.Size(251, 28);
             this.ozenkiSubject.TabIndex = 66;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(108, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 18);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "Оценка КР";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Location = new System.Drawing.Point(111, 210);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 1);
+            this.panel3.TabIndex = 65;
+            // 
+            // thisIsKR
+            // 
+            this.thisIsKR.AutoSize = true;
+            this.thisIsKR.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.thisIsKR.Location = new System.Drawing.Point(391, 150);
+            this.thisIsKR.Name = "thisIsKR";
+            this.thisIsKR.Size = new System.Drawing.Size(15, 14);
+            this.thisIsKR.TabIndex = 67;
+            this.thisIsKR.UseVisualStyleBackColor = true;
             // 
             // AddOzenkiData
             // 
@@ -202,16 +199,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(719, 355);
+            this.Controls.Add(this.thisIsKR);
             this.Controls.Add(this.ozenkiSubject);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.ozenkiStatus);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ozenkiOzenka);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ozenkiCourse);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.sa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ozenkiChipher);
@@ -232,18 +229,18 @@
 
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.ComboBox ozenkiStatus;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox ozenkiOzenka;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ozenkiCourse;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label sa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox ozenkiChipher;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox ozenkiSubject;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox thisIsKR;
     }
 }

@@ -24,11 +24,29 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
 
 
             //Клик по кнопке "Добавить запись"
-            specialtyCreateNote.Click += (f, a) => new AddSpecialty().ShowDialog();
+            specialtyCreateNote.Click += (f, a) => 
+            {
+                new AddSpecialty()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             //Клик по кнопке "Редактировать запись"
-            specialtyEditNote.Click += (f, a) => new EditSpecialty().ShowDialog();
+            specialtyEditNote.Click += (f, a) => 
+            {
+                new EditSpecialty()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             //Клик по кнопке "Фильтр выборки"
-            specialtyFilter.Click += (f, a) => new FilterSpecialty().ShowDialog();
+            specialtyFilter.Click += (f, a) => 
+            {
+                new FilterSpecialty()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             //Клик по кнопке "Сбросить фильтр"
             specialtyFilterClear.Click += (f, a) => 
             {

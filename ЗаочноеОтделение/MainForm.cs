@@ -3,16 +3,20 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using ЗаочноеОтделение.DiplomDataTabs;
 using ЗаочноеОтделение.MoveDataTabs;
 using ЗаочноеОтделение.OzenkiDataTabs;
 using ЗаочноеОтделение.SelfDataTabs;
 using ЗаочноеОтделение.SelfDataTabs.Groups;
+using ЗаочноеОтделение.SubjectDataTabs;
+using ЗаочноеОтделение.SubjectDataTabs.Prepod;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace ЗаочноеОтделение
 {
     public partial class MainForm : Form
     {
+
         #region Функции постройки интерфейса
 
         /// <summary>
@@ -38,7 +42,13 @@ namespace ЗаочноеОтделение
             // Событие при клике на кнопку "Добавить запись"
             // Создаем новый объект формы добавления записи (AddSelfData)
             // и открываем ее
-            selfTabCreateNote.Click += (f, a) => new AddSelfData().ShowDialog();
+            selfTabCreateNote.Click += (f, a) => 
+            {
+                new AddSelfData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
 
             // Событие при клике на кнопку "Редактировать запись"
             selfTabEditNote.Click += (f, a) => 
@@ -46,14 +56,23 @@ namespace ЗаочноеОтделение
                 // Если количество выбранных записей в таблице 
                 // больше нуля, то открываем форму редактирования
                 if (selfTabDataTable.SelectedItems.Count > 0)
-                    new EditSelfData().ShowDialog();
+                    new EditSelfData()
+                    {
+                        Owner = this
+                    }.ShowDialog();
                 // Иначе показываем ошибку
                 else
                     MessageBox.Show("Выберите запись для редактирования");
             };
 
             // Событие при клике на кнопку "Фильтр"
-            selfTabFilter.Click += (f, a) => new FilterSelfData().ShowDialog();
+            selfTabFilter.Click += (f, a) => 
+            {
+                new FilterSelfData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
 
             // Событие при клике на кнопку "Сбросить фильтр"
             selfTabFilterClear.Click += (f, a) => 
@@ -62,7 +81,13 @@ namespace ЗаочноеОтделение
             };
 
             // Событие при клике на кнопку "Показать группы"
-            selfTabShowGroups.Click += (f, a) => new Groups().ShowDialog();
+            selfTabShowGroups.Click += (f, a) => 
+            {
+                new Groups()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
         }
 
         /// <summary>
@@ -83,16 +108,34 @@ namespace ЗаочноеОтделение
             ozenkiTabDataTableSeparator.Width = tabs.Width - 27;
 
             // Событие при нажатие на кнопку "Добавить запись"
-            ozenkiTabCreateNote.Click += (f, a) => new AddOzenkiData().ShowDialog();
+            ozenkiTabCreateNote.Click += (f, a) => 
+            {
+                new AddOzenkiData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Событие при нажатие на кнопку "Редактировать запись"
-            ozenkiTabEditNote.Click += (f, a) => new EditOzenkiData().ShowDialog();
+            ozenkiTabEditNote.Click += (f, a) => 
+            {
+                new EditOzenkiData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Событие при нажатие на кнопку "Очистить фильтр"
             ozenkiTabFilterClear.Click += (f, a) => 
             {
                 MessageBox.Show("Фильтр сброшен");
             };
             // Событие при нажатие на кнопку "Фильтр"
-            ozenkiTabFilter.Click += (f, a) => new FilterOzenkiData().ShowDialog();
+            ozenkiTabFilter.Click += (f, a) => 
+            {
+                new FilterOzenkiData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
         }
 
         /// <summary>
@@ -113,11 +156,38 @@ namespace ЗаочноеОтделение
             subjectTabShowTeacher.Location =
                 new Point(subjectTabDataTable.Location.X, 
                 subjectTabDataTable.Location.Y + subjectTabDataTable.Height + 15);
-            subjectTabShowSubjectInCourse.Location =
-                new Point(subjectTab.Location.X + subjectTabShowTeacher.Width + 15,
-                subjectTabDataTable.Location.Y + subjectTabDataTable.Height + 15);
             // Меняем размер разделителя у таблицы
             subjectTabDataTableSeparator.Width = tabs.Width - 27;
+
+            subjectTabCreateNote.Click += (f, a) => 
+            {
+                new AddSubjectData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+            subjectTabEditNote.Click += (f, a) =>
+            {
+                new EditSubjectData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+            subjectTabFilter.Click += (f, a) => 
+            {
+                new FilterSubjectData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+
+            subjectTabShowTeacher.Click += (f, a) => 
+            {
+                new Prepod()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
         }
 
         /// <summary>
@@ -140,6 +210,36 @@ namespace ЗаочноеОтделение
                 diplomTabDataTable.Location.Y + diplomTabDataTable.Height + 15);
             // Меняем размер разделителя у таблицы
             diplomTabDataTableSeparator.Width = tabs.Width - 27;
+
+            diplomTabCreateNote.Click += (f, a) =>
+            {
+                new AddDiplomData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+            diplomTabEditNote.Click += (f, a) =>
+            {
+                new EditDiplomData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+            diplomTabFilter.Click += (f, a) =>
+            {
+                new FilterDiplomData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
+
+            diplomTabShowTeacher.Click += (f, a) => 
+            {
+                new Prepod
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
         }
 
         /// <summary>
@@ -160,11 +260,29 @@ namespace ЗаочноеОтделение
             moveTabDataTableSeparator.Width = tabs.Width - 27;
             
             // Событие клика по кнопке "Добавить запись"
-            moveTabCreateNote.Click += (f, a) => new AddMoveData().ShowDialog();
+            moveTabCreateNote.Click += (f, a) => 
+            {
+                new AddMoveData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Событие клика по кнопке "Редактировать запись"
-            moveTabEditNote.Click += (f, a) => new EditMoveData().ShowDialog();
+            moveTabEditNote.Click += (f, a) => 
+            {
+                new EditMoveData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Событие клика по кнопке "Фильтр выборки"
-            moveTabFilter.Click += (f, a) => new FilterMoveData().ShowDialog();
+            moveTabFilter.Click += (f, a) => 
+            {
+                new FilterMoveData()
+                {
+                    Owner = this
+                }.ShowDialog();
+            };
             // Событие при клике на кнопку "Сбросить фильтр"
             moveTabFilterClear.Click += (f, a) =>
             {
@@ -173,17 +291,13 @@ namespace ЗаочноеОтделение
         }
 
         #endregion
-
-
+        
 
         /// <summary>
         /// Конструктор класса основной формы
         /// </summary>
         public MainForm()
         {
-            // TODO: Переделать метод подгружения данных. Сделать через связи внутри приложения. Создать для этого классы.
-
-
             #region Построение интерфейса
 
             // Стандартная функция отрисовки контролов
@@ -249,6 +363,7 @@ namespace ЗаочноеОтделение
             #endregion
         }
 
+        #region Методы
 
         /// <summary>
         /// Метод, который подкгружает данные во вкладку selfTab
@@ -307,7 +422,7 @@ namespace ЗаочноеОтделение
                             item.BackColor = badColor;
                             if (reader[10].ToString() == "Отчислен")
                                 item.ForeColor = Color.White;
-                            
+
                             selfTabDataTable.Items.Add(item);
                         }
                     }
@@ -358,7 +473,7 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[2].ToString());
                             item.SubItems.Add(reader[3].ToString());
                             item.SubItems.Add(reader[4].ToString());
-                            item.SubItems.Add(Convert.ToDateTime(reader[5]).ToShortDateString());
+                            item.SubItems.Add(reader[5].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -492,7 +607,10 @@ namespace ЗаочноеОтделение
                     // Создаем запрос к бд
                     cmd.CommandText = "SELECT [Шифр]," +
                                       "       [Тема]," +
-                                      "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.'" +
+                                      "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.', " +
+                                      "       [СрокиСдачи], " +
+                                      "       [Выдан], " +
+                                      "       [Сдан]" +
                                       "FROM [Диплом] " +
                                       "INNER JOIN [Преподаватели] ON [Преподаватели].[КодПреподавателя] = [Диплом].[Руководитель]";
 
@@ -509,6 +627,9 @@ namespace ЗаочноеОтделение
                             ListViewItem item = new ListViewItem(reader[0].ToString());
                             item.SubItems.Add(reader[1].ToString());
                             item.SubItems.Add(reader[2].ToString());
+                            item.SubItems.Add(reader[3].ToString());
+                            item.SubItems.Add(reader[4].ToString());
+                            item.SubItems.Add(reader[5].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -519,5 +640,8 @@ namespace ЗаочноеОтделение
                 }
             }
         }
+
+        #endregion
+
     }
 }
