@@ -81,13 +81,13 @@ namespace ЗаочноеОтделение.OzenkiDataTabs
                     "НаличиеКР",
                     "ОценкаКР"
                 };
-                var values = new object[]
+                var values = new string[]
                 {
                     ozenkiChipher.Text,
                     Datebase.GetSubjectID(ozenkiSubject.Text).ToString(),
-                    Convert.ToInt32(ozenkiOzenka.Text),
+                    ozenkiOzenka.Text,
                     thisIsKR.Checked ? "Да" : "Нет",
-                    Convert.ToInt32(ozenkiCourse.Text)
+                    ozenkiCourse.Text
                 };
                 Datebase.InsertData("Успеваемость", field, values);
                 (this.Owner as MainForm).LoadDataInOzenkiDataTable();

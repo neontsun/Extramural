@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ProgLib.Data.OleDb;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +59,23 @@ namespace ЗаочноеОтделение.SubjectDataTabs.Prepod
             // Событие при клике на кнопку "Сбросить фильтр"
             prepodTabFilterClear.Click += (f, a) =>
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInPrepodDataTable();
+            };
+
+
+
+            prepodDeleteNote.Click += (f, a) =>
+            {
+
+                if (prepodTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = prepodTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInPrepodDataTable(str);
+                    LoadDataInPrepodDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
         }
 
@@ -119,5 +137,65 @@ namespace ЗаочноеОтделение.SubjectDataTabs.Prepod
                 }
             }
         }
+
+        internal void DeleteDataInPrepodDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Диплом] " +
+                                      "WHERE [Руководитель] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Предметы] " +
+                                      "WHERE [КодПреподавателя] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Преподаватели] " +
+                                      "WHERE [КодПреподавателя] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Filter(ListView Table, String Request)
+        {
+            // Инициализация подключения к базе данных и запрос данных 
+            OleDbDataBase _database = new OleDbDataBase(new FileInfo(Properties.Settings.Default.ConnectionPath));
+            OleDbResult _result = _database.Request(Request);
+
+            // Вывод сообщеня об ошибке при её наличии
+            if (_result.Message != "Command(s) completed successfully.")
+                MessageBox.Show(_result.Message, "Ошибка запроса", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // Сбор данных
+            DataTable _data = _result.Table;
+            _database.Dispose();
+
+            // Очистка данных в ListView и заполнение новыми
+            Table.Items.Clear();
+            foreach (DataRow _row in _data.Rows)
+            {
+                ListViewItem Row = new ListViewItem(
+                    _row.ItemArray.Select(x => x.ToString()).ToArray());
+
+                Table.Items.Add(Row);
+            }
+        }
+
     }
 }

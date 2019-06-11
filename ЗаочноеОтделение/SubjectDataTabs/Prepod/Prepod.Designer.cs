@@ -41,6 +41,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.moveTabDataTableSeparator = new System.Windows.Forms.Panel();
+            this.prepodDeleteNote = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prepodTabCreateNote
@@ -176,12 +177,29 @@
             this.moveTabDataTableSeparator.Size = new System.Drawing.Size(1004, 1);
             this.moveTabDataTableSeparator.TabIndex = 21;
             // 
+            // prepodDeleteNote
+            // 
+            this.prepodDeleteNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.prepodDeleteNote.FlatAppearance.BorderSize = 0;
+            this.prepodDeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prepodDeleteNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.prepodDeleteNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.prepodDeleteNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.prepodDeleteNote.Location = new System.Drawing.Point(753, 8);
+            this.prepodDeleteNote.Name = "prepodDeleteNote";
+            this.prepodDeleteNote.Size = new System.Drawing.Size(146, 28);
+            this.prepodDeleteNote.TabIndex = 31;
+            this.prepodDeleteNote.Text = "Удалить запись";
+            this.prepodDeleteNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prepodDeleteNote.UseVisualStyleBackColor = true;
+            // 
             // Prepod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(988, 597);
+            this.Controls.Add(this.prepodDeleteNote);
             this.Controls.Add(this.moveTabDataTableSeparator);
             this.Controls.Add(this.prepodTabDataTable);
             this.Controls.Add(this.diplomTabToolsSeparatorHorizontal);
@@ -208,11 +226,12 @@
         private System.Windows.Forms.Panel diplomTabToolsSeparatorVertical2;
         private System.Windows.Forms.Button prepodTabEditNote;
         private System.Windows.Forms.Panel diplomTabToolsSeparatorHorizontal;
-        private System.Windows.Forms.ListView prepodTabDataTable;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel moveTabDataTableSeparator;
+        private System.Windows.Forms.Button prepodDeleteNote;
+        public System.Windows.Forms.ListView prepodTabDataTable;
     }
 }

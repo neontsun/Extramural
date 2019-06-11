@@ -70,7 +70,7 @@
             this.specCode.Location = new System.Drawing.Point(124, 112);
             this.specCode.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.specCode.Name = "specCode";
-            this.specCode.Size = new System.Drawing.Size(158, 25);
+            this.specCode.Size = new System.Drawing.Size(333, 25);
             this.specCode.TabIndex = 81;
             // 
             // panel4

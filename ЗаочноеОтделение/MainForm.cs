@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ProgLib.Data.OleDb;
+using System;
+using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using ЗаочноеОтделение.DiplomDataTabs;
 using ЗаочноеОтделение.MoveDataTabs;
@@ -39,6 +42,7 @@ namespace ЗаочноеОтделение
                 selfTabDataTable.Location.Y + selfTabDataTable.Height + 15);
             // Меняем размер разделителя у таблицы
             selfTabDataTableSeparator.Width = tabs.Width - 27;
+
             // Событие при клике на кнопку "Добавить запись"
             // Создаем новый объект формы добавления записи (AddSelfData)
             // и открываем ее
@@ -56,7 +60,20 @@ namespace ЗаочноеОтделение
                 // Если количество выбранных записей в таблице 
                 // больше нуля, то открываем форму редактирования
                 if (selfTabDataTable.SelectedItems.Count > 0)
-                    new EditSelfData()
+                    new EditSelfData(new string[] 
+                    {
+                        selfTabDataTable.SelectedItems[0].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[4].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[5].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[6].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[7].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[8].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[9].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[10].Text
+                    })
                     {
                         Owner = this
                     }.ShowDialog();
@@ -77,7 +94,7 @@ namespace ЗаочноеОтделение
             // Событие при клике на кнопку "Сбросить фильтр"
             selfTabFilterClear.Click += (f, a) => 
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInSelfDataTable();
             };
 
             // Событие при клике на кнопку "Показать группы"
@@ -87,6 +104,20 @@ namespace ЗаочноеОтделение
                 {
                     Owner = this
                 }.ShowDialog();
+            };
+
+            selfTabDeleteNote.Click += (f, a) => 
+            {
+
+                if (selfTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = selfTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInSelfDataTable(str);
+                    LoadDataInSelfDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
         }
 
@@ -126,7 +157,7 @@ namespace ЗаочноеОтделение
             // Событие при нажатие на кнопку "Очистить фильтр"
             ozenkiTabFilterClear.Click += (f, a) => 
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInOzenkiDataTable();
             };
             // Событие при нажатие на кнопку "Фильтр"
             ozenkiTabFilter.Click += (f, a) => 
@@ -135,6 +166,20 @@ namespace ЗаочноеОтделение
                 {
                     Owner = this
                 }.ShowDialog();
+            };
+
+            ozenkiTabDeleteNote.Click += (f, a) =>
+            {
+
+                if (ozenkiTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = ozenkiTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInOzenkiDataTable(str);
+                    LoadDataInOzenkiDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
         }
 
@@ -180,6 +225,10 @@ namespace ЗаочноеОтделение
                     Owner = this
                 }.ShowDialog();
             };
+            subjectTabFilterClear.Click += (f, a) => 
+            {
+                this.LoadDataInSubjectDataTable();
+            };
 
             subjectTabShowTeacher.Click += (f, a) => 
             {
@@ -187,6 +236,20 @@ namespace ЗаочноеОтделение
                 {
                     Owner = this
                 }.ShowDialog();
+            };
+
+            subjectTabDeleteNote.Click += (f, a) =>
+            {
+
+                if (subjectTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = subjectTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInSubjectDataTable(str);
+                    LoadDataInSubjectDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
         }
 
@@ -232,6 +295,10 @@ namespace ЗаочноеОтделение
                     Owner = this
                 }.ShowDialog();
             };
+            diplomTabFilterClear.Click += (f, a) =>
+            {
+                this.LoadDataInDiplomDataTable();
+            };
 
             diplomTabShowTeacher.Click += (f, a) => 
             {
@@ -240,6 +307,21 @@ namespace ЗаочноеОтделение
                     Owner = this
                 }.ShowDialog();
             };
+
+            diplomTabDeleteNote.Click += (f, a) =>
+            {
+
+                if (diplomTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = diplomTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInDiplomDataTable(str);
+                    LoadDataInDiplomDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
+            };
+
         }
 
         /// <summary>
@@ -286,7 +368,21 @@ namespace ЗаочноеОтделение
             // Событие при клике на кнопку "Сбросить фильтр"
             moveTabFilterClear.Click += (f, a) =>
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInMoveDataTable();
+            };
+
+            moveTabDeleteNote.Click += (f, a) =>
+            {
+
+                if (moveTabDataTable.SelectedItems.Count > 0)
+                {
+                    string str = moveTabDataTable.SelectedItems[0].Text;
+                    DeleteDataInMoveDataTable(str);
+                    LoadDataInMoveDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
         }
 
@@ -419,9 +515,7 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[8].ToString());
                             item.SubItems.Add(reader[9].ToString());
                             item.SubItems.Add(reader[10].ToString());
-                            item.BackColor = badColor;
-                            if (reader[10].ToString() == "Отчислен")
-                                item.ForeColor = Color.White;
+                            item.BackColor = goodColor;
 
                             selfTabDataTable.Items.Add(item);
                         }
@@ -449,7 +543,8 @@ namespace ЗаочноеОтделение
                 using (var cmd = conn.CreateCommand())
                 {
                     // Создаем запрос к бд
-                    cmd.CommandText = "SELECT [Шифр]," +
+                    cmd.CommandText = "SELECT [Успеваемость].[Код], " +
+                                      "       [Шифр]," +
                                       "       [Курс]," +
                                       "       [НаименованиеПредмета]," +
                                       "       [Оценка]," +
@@ -474,6 +569,7 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[3].ToString());
                             item.SubItems.Add(reader[4].ToString());
                             item.SubItems.Add(reader[5].ToString());
+                            item.SubItems.Add(reader[6].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -504,7 +600,8 @@ namespace ЗаочноеОтделение
                 using (var cmd = conn.CreateCommand())
                 {
                     // Создаем запрос к бд
-                    cmd.CommandText = "SELECT [Шифр]," +
+                    cmd.CommandText = "SELECT [Код], " +
+                                      "       [Шифр]," +
                                       "       [УчебныйГод]," +
                                       "       [Курс]," +
                                       "       [НомерПриказа]," +
@@ -525,7 +622,8 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[1].ToString());
                             item.SubItems.Add(reader[2].ToString());
                             item.SubItems.Add(reader[3].ToString());
-                            item.SubItems.Add(Convert.ToDateTime(reader[4]).ToShortDateString());
+                            item.SubItems.Add(reader[4].ToString());
+                            item.SubItems.Add(Convert.ToDateTime(reader[5]).ToShortDateString());
                             item.BackColor = goodColor;
 
                             moveTabDataTable.Items.Add(item);
@@ -554,7 +652,8 @@ namespace ЗаочноеОтделение
                 using (var cmd = conn.CreateCommand())
                 {
                     // Создаем запрос к бд
-                    cmd.CommandText = "SELECT [НаименованиеПредмета]," +
+                    cmd.CommandText = "SELECT [КодПредмета]," +
+                                      "       [НаименованиеПредмета]," +
                                       "       [КоличествоЧасов]," +
                                       "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.', " +
                                       "       [Курс]" +
@@ -575,6 +674,7 @@ namespace ЗаочноеОтделение
                             item.SubItems.Add(reader[1].ToString());
                             item.SubItems.Add(reader[2].ToString());
                             item.SubItems.Add(reader[3].ToString());
+                            item.SubItems.Add(reader[4].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -641,7 +741,173 @@ namespace ЗаочноеОтделение
             }
         }
 
+
+
+
+        internal void DeleteDataInSelfDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+                    
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Личные данные] " +
+                                      "WHERE [Шифр] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void DeleteDataInOzenkiDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Успеваемость] " +
+                                      "WHERE [Код] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void DeleteDataInMoveDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Движение] " +
+                                      "WHERE [Код] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void DeleteDataInSubjectDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+                    
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Предметы] " +
+                                      "WHERE [кодПредмета] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void DeleteDataInDiplomDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Диплом] " +
+                                      "WHERE [Шифр] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
+
+        internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Личные данные] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Шифр] = '" + where[0] + "'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
         #endregion
 
+
+        public void Filter(ListView Table, String Request)
+        {
+            // Инициализация подключения к базе данных и запрос данных 
+            OleDbDataBase _database = new OleDbDataBase(new FileInfo(Properties.Settings.Default.ConnectionPath));
+            OleDbResult _result = _database.Request(Request);
+
+            // Вывод сообщеня об ошибке при её наличии
+            if (_result.Message != "Command(s) completed successfully.")
+                MessageBox.Show(_result.Message, "Ошибка запроса", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // Сбор данных
+            DataTable _data = _result.Table;
+            _database.Dispose();
+
+            // Очистка данных в ListView и заполнение новыми
+            Table.Items.Clear();
+            foreach (DataRow _row in _data.Rows)
+            {
+                ListViewItem Row = new ListViewItem(
+                    _row.ItemArray.Select(x => x.ToString()).ToArray());
+
+                Table.Items.Add(Row);
+            }
+        }
     }
 }

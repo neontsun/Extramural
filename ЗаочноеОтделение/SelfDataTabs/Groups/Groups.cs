@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ProgLib.Data.OleDb;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +51,7 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
             // Клик по кнопке "Сбросить фильтр"
             groupsFilterClear.Click += (f, a) => 
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInGroupsDataTable();
             };
             // Клик по кнопке "Фильтр"
             groupsFilter.Click += (f, a) => 
@@ -58,6 +60,20 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                 {
                     Owner = this
                 }.ShowDialog();
+            };
+
+            groupsDeleteNote.Click += (f, a) =>
+            {
+
+                if (groupsDataTable.SelectedItems.Count > 0)
+                {
+                    string str = groupsDataTable.SelectedItems[0].Text;
+                    DeleteDataInGroupDataTable(str);
+                    LoadDataInGroupsDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
 
 
@@ -86,7 +102,7 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                 using (var cmd = conn.CreateCommand())
                 {
                     // Создаем запрос к бд
-                    cmd.CommandText = "SELECT [НомерГруппы], " +
+                    cmd.CommandText = "SELECT [Группы].[Код], [НомерГруппы], " +
                                       "       [Специальность].[КодСпециальности] & ' ' & [НаименованиеСпециальности], " +
                                       "       [ГодПоступления] " + 
                                       "FROM [Группы] " +
@@ -105,6 +121,7 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                             ListViewItem item = new ListViewItem(reader[0].ToString());
                             item.SubItems.Add(reader[1].ToString());
                             item.SubItems.Add(reader[2].ToString());
+                            item.SubItems.Add(reader[3].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -113,6 +130,54 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                         }
                     }
                 }
+            }
+        }
+
+
+        internal void DeleteDataInGroupDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+                    
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Группы] " +
+                                      "WHERE [Код] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Filter(ListView Table, String Request)
+        {
+            // Инициализация подключения к базе данных и запрос данных 
+            OleDbDataBase _database = new OleDbDataBase(new FileInfo(Properties.Settings.Default.ConnectionPath));
+            OleDbResult _result = _database.Request(Request);
+
+            // Вывод сообщеня об ошибке при её наличии
+            if (_result.Message != "Command(s) completed successfully.")
+                MessageBox.Show(_result.Message, "Ошибка запроса", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // Сбор данных
+            DataTable _data = _result.Table;
+            _database.Dispose();
+
+            // Очистка данных в ListView и заполнение новыми
+            Table.Items.Clear();
+            foreach (DataRow _row in _data.Rows)
+            {
+                ListViewItem Row = new ListViewItem(
+                    _row.ItemArray.Select(x => x.ToString()).ToArray());
+
+                Table.Items.Add(Row);
             }
         }
     }

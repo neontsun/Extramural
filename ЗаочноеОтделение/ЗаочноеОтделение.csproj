@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ProgLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ProgLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -241,6 +245,9 @@
     <EmbeddedResource Include="DiplomDataTabs\EditDiplomData.resx">
       <DependentUpon>EditDiplomData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DiplomDataTabs\FilterDiplomData.resx">
+      <DependentUpon>FilterDiplomData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataTabs\AddMoveData.resx">
       <DependentUpon>AddMoveData.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,8 +327,14 @@
     <EmbeddedResource Include="SubjectDataTabs\EditSubjectData.resx">
       <DependentUpon>EditSubjectData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\FilterSubjectData.resx">
+      <DependentUpon>FilterSubjectData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectDataTabs\Prepod\AddPrepodData.resx">
       <DependentUpon>AddPrepodData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\Prepod\FilterPrepodData.resx">
+      <DependentUpon>FilterPrepodData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectDataTabs\Prepod\Prepod.resx">
       <DependentUpon>Prepod.cs</DependentUpon>

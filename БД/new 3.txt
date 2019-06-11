@@ -1,0 +1,98 @@
+internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
+{
+	// Создаем подключение к бд и передаем строку подключения в параметры
+	using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+	{
+		// Открываем подключение
+		conn.Open();
+		// Создаем команду
+		using (var cmd = conn.CreateCommand())
+		{
+			// Отдельно запросы...
+
+			// Сборка данных в запрос
+			cmd.CommandText = "UPDATE [Личные данные] " +
+							  "SET ";
+
+			for (int i = 0; i < fields.Length; i++)
+			{
+				cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+			}
+			cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Шифр] = '" + where[0] + "'";
+			cmd.ExecuteNonQuery();
+		}
+	}
+}
+
+
+
+string ID = string.Empty;
+
+this.Load += (f, a) => 
+{
+	this.ID = values[0];
+
+	cipher.Text = values[0];
+	group.Text = values[1];
+	fio.Text = values[2];
+	if (values[3] == "Мужской")
+		genderM.Checked = true;
+	else
+		genderF.Checked = true;
+
+	birthday.Text = Convert.ToDateTime(values[4]).ToString();
+	adress.Text = values[5];
+	phone.Text = values[6];
+	jobPlace.Text = values[7];
+
+	if (values[8] == "Английский")
+		languageE.Checked = true;
+	else if (values[8] == "Французкий")
+		languageF.Checked = true;
+	else
+		languageN.Checked = true;
+
+	education.Text = values[9];
+	status.Text = values[10];
+};
+
+
+
+
+
+(this.Owner as MainForm).UpdateDataInDiplomDataTable(
+	new string[]
+	{
+		"Шифр",
+		"КодГруппы",
+		"ФИО",
+		"Пол",
+		"ДатаРождения",
+		"ДомашнийАдрес",
+		"Телефон",
+		"МестоРаботы",
+		"ИзучаемыйЯзык",
+		"Образование",
+		"Статус"
+	},
+	new string[]
+	{
+		cipher.Text,
+		Datebase.GetGroupID(group.Text).ToString(),
+		fio.Text,
+		genderF.Checked ? genderF.Text : genderM.Text,
+		Convert.ToDateTime(birthday.Text).ToString(),
+		adress.Text,
+		phone.Text,
+		jobPlace.Text,
+		languageE.Checked ? languageE.Text : (languageF.Checked ? languageF.Text : languageN.Text),
+		education.Text,
+		status.Text
+	},
+	new string[] 
+	{
+		this.ID
+	}
+);
+(this.Owner as MainForm).LoadDataInSelfDataTable();
+this.Close();

@@ -35,3 +35,9 @@ C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтдел
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.DiplomDataTabs.EditDiplomData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.Prepod.Prepod.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.Prepod.AddPrepodData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\bin\Debug\ProgLib.pdb
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\bin\Debug\ProgLib.xml
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.csproj.CopyComplete
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.FilterSubjectData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.DiplomDataTabs.FilterDiplomData.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.Prepod.FilterPrepodData.resources

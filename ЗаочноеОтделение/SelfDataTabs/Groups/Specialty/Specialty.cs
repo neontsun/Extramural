@@ -22,6 +22,17 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
             // Стандартный метод отрисовки интерфейса
             InitializeComponent();
 
+            // Меняем размер таблицы в зависимости от размера формы.
+            // Из-за того, что мы открываем в полный экран программу, 
+            // мы подстраиваем таблицу под размер
+            // Ширина
+            specialtyDataTable.Width = this.Width - 25;
+            // Высота
+            specialtyDataTable.Height = this.Height - 200;
+            // Ширина полосы разделения у меню
+            specialtyToolsSeparatorHorizontal.Width = this.Width;
+            // Меняем размер разделителя у таблицы
+            panel1.Width = this.Width - 27;
 
             //Клик по кнопке "Добавить запись"
             specialtyCreateNote.Click += (f, a) => 
@@ -50,8 +61,23 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
             //Клик по кнопке "Сбросить фильтр"
             specialtyFilterClear.Click += (f, a) => 
             {
-                MessageBox.Show("Фильтр сброшен");
+                this.LoadDataInSpecialtyDataTable();
             };
+
+            specialtyDeleteNote.Click += (f, a) =>
+            {
+
+                if (specialtyDataTable.SelectedItems.Count > 0)
+                {
+                    string str = specialtyDataTable.SelectedItems[0].Text;
+                    DeleteDataInSpecDataTable(str);
+                    LoadDataInSpecialtyDataTable();
+                }
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
+            };
+
 
             // Событие при загрузке формы
             this.Load += (f, a) => LoadDataInSpecialtyDataTable();
@@ -77,7 +103,7 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
                 using (var cmd = conn.CreateCommand())
                 {
                     // Создаем запрос к бд
-                    cmd.CommandText = "SELECT [Специальность].[КодСпециальности], " +
+                    cmd.CommandText = "SELECT [Код],[Специальность].[КодСпециальности], " +
                                       "       [НаименованиеСпециальности] " +
                                       "FROM [Специальность]";
 
@@ -93,6 +119,7 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
                             // Добавляем строку
                             ListViewItem item = new ListViewItem(reader[0].ToString());
                             item.SubItems.Add(reader[1].ToString());
+                            item.SubItems.Add(reader[2].ToString());
                             item.BackColor = goodColor;
                             //if (reader[10].ToString() == "Отчислен")
                             //    item.ForeColor = Color.White;
@@ -100,6 +127,29 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
                             specialtyDataTable.Items.Add(item);
                         }
                     }
+                }
+            }
+        }
+
+
+        internal void DeleteDataInSpecDataTable(string id)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Создаем запрос к бд
+                    cmd.CommandText = "DELETE " +
+                                      "FROM [Специальность] " +
+                                      "WHERE [Код] = @ID";
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

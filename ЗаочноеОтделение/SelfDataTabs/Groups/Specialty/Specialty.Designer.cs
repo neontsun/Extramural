@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.specialtyDataTable = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.specialtyToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.specialtyToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.specialtyToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
@@ -39,14 +37,19 @@
             this.specialtyCreateNote = new System.Windows.Forms.Button();
             this.specialtyFilter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.specialtyDeleteNote = new System.Windows.Forms.Button();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // specialtyDataTable
             // 
             this.specialtyDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.specialtyDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
             this.specialtyDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.specialtyDataTable.FullRowSelect = true;
             this.specialtyDataTable.GridLines = true;
@@ -56,16 +59,6 @@
             this.specialtyDataTable.TabIndex = 28;
             this.specialtyDataTable.UseCompatibleStateImageBehavior = false;
             this.specialtyDataTable.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Код специальности";
-            this.columnHeader1.Width = 177;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Наименование специальности";
-            this.columnHeader2.Width = 498;
             // 
             // specialtyToolsSeparatorVertical2
             // 
@@ -163,12 +156,43 @@
             this.panel1.Size = new System.Drawing.Size(856, 1);
             this.panel1.TabIndex = 29;
             // 
+            // specialtyDeleteNote
+            // 
+            this.specialtyDeleteNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.specialtyDeleteNote.FlatAppearance.BorderSize = 0;
+            this.specialtyDeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.specialtyDeleteNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.specialtyDeleteNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.specialtyDeleteNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.specialtyDeleteNote.Location = new System.Drawing.Point(753, 36);
+            this.specialtyDeleteNote.Name = "specialtyDeleteNote";
+            this.specialtyDeleteNote.Size = new System.Drawing.Size(146, 28);
+            this.specialtyDeleteNote.TabIndex = 30;
+            this.specialtyDeleteNote.Text = "Удалить запись";
+            this.specialtyDeleteNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.specialtyDeleteNote.UseVisualStyleBackColor = true;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ID";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Код специальности";
+            this.columnHeader5.Width = 228;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Наименование специальности";
+            this.columnHeader6.Width = 300;
+            // 
             // Specialty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 629);
+            this.ClientSize = new System.Drawing.Size(1044, 629);
+            this.Controls.Add(this.specialtyDeleteNote);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.specialtyDataTable);
             this.Controls.Add(this.specialtyToolsSeparatorVertical2);
@@ -197,8 +221,10 @@
         private System.Windows.Forms.Button specialtyFilterClear;
         private System.Windows.Forms.Button specialtyCreateNote;
         private System.Windows.Forms.Button specialtyFilter;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button specialtyDeleteNote;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

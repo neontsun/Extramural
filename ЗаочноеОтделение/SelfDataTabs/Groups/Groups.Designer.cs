@@ -32,15 +32,17 @@
             this.groupsToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.groupsToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
             this.groupsDataTable = new System.Windows.Forms.ListView();
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupsShowSpecialty = new System.Windows.Forms.Button();
             this.groupsEditNote = new System.Windows.Forms.Button();
             this.groupsFilterClear = new System.Windows.Forms.Button();
             this.groupsCreateNote = new System.Windows.Forms.Button();
             this.groupsFilter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupsDeleteNote = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // groupsToolsSeparatorVertical2
@@ -71,9 +73,10 @@
             // 
             this.groupsDataTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupsDataTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader26,
-            this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
             this.groupsDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupsDataTable.FullRowSelect = true;
             this.groupsDataTable.GridLines = true;
@@ -84,20 +87,24 @@
             this.groupsDataTable.UseCompatibleStateImageBehavior = false;
             this.groupsDataTable.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader26
+            // columnHeader4
             // 
-            this.columnHeader26.Text = "Номер группы";
-            this.columnHeader26.Width = 135;
+            this.columnHeader4.Text = "ID";
             // 
-            // columnHeader1
+            // columnHeader5
             // 
-            this.columnHeader1.Text = "Код и название специальности";
-            this.columnHeader1.Width = 366;
+            this.columnHeader5.Text = "Номер группы";
+            this.columnHeader5.Width = 179;
             // 
-            // columnHeader2
+            // columnHeader6
             // 
-            this.columnHeader2.Text = "Год поступления";
-            this.columnHeader2.Width = 190;
+            this.columnHeader6.Text = "Специальность";
+            this.columnHeader6.Width = 260;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Год поступления";
+            this.columnHeader7.Width = 249;
             // 
             // groupsShowSpecialty
             // 
@@ -187,12 +194,29 @@
             this.panel1.Size = new System.Drawing.Size(1102, 1);
             this.panel1.TabIndex = 21;
             // 
+            // groupsDeleteNote
+            // 
+            this.groupsDeleteNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.groupsDeleteNote.FlatAppearance.BorderSize = 0;
+            this.groupsDeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupsDeleteNote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupsDeleteNote.Image = global::ЗаочноеОтделение.Properties.Resources.edit;
+            this.groupsDeleteNote.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.groupsDeleteNote.Location = new System.Drawing.Point(753, 33);
+            this.groupsDeleteNote.Name = "groupsDeleteNote";
+            this.groupsDeleteNote.Size = new System.Drawing.Size(146, 28);
+            this.groupsDeleteNote.TabIndex = 24;
+            this.groupsDeleteNote.Text = "Удалить запись";
+            this.groupsDeleteNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.groupsDeleteNote.UseVisualStyleBackColor = true;
+            // 
             // Groups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1129, 682);
+            this.Controls.Add(this.groupsDeleteNote);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupsShowSpecialty);
             this.Controls.Add(this.groupsDataTable);
@@ -222,11 +246,13 @@
         private System.Windows.Forms.Button groupsFilterClear;
         private System.Windows.Forms.Button groupsCreateNote;
         private System.Windows.Forms.Button groupsFilter;
-        private System.Windows.Forms.ListView groupsDataTable;
-        private System.Windows.Forms.ColumnHeader columnHeader26;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button groupsShowSpecialty;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button groupsDeleteNote;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        public System.Windows.Forms.ListView groupsDataTable;
     }
 }
