@@ -124,6 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(422, 286);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
@@ -134,7 +135,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Name = "FilterPrepodData";
-            this.Text = "FilterPrepodData";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Фильтр";
             this.ResumeLayout(false);
             this.PerformLayout();
 

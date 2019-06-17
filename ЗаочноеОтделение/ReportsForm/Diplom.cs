@@ -53,6 +53,8 @@ namespace ЗаочноеОтделение.ReportsForm
                     cmd.CommandText = "SELECT [НомерГруппы]" +
                                       "FROM [Группы]";
 
+                    
+
                     // Получаем данные из бд
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -80,6 +82,9 @@ namespace ЗаочноеОтделение.ReportsForm
                                       "INNER JOIN [Группы] ON [Личные данные].[КодГруппы] = [Группы].[Код] " +
                                       "WHERE [Группы].[НомерГруппы] = @Group";
                     cmd.Parameters.AddWithValue("@Group", group);
+
+                    student.Items.Clear();
+                    student.Text = string.Empty;
 
                     // Получаем данные из бд
                     using (var reader = cmd.ExecuteReader())

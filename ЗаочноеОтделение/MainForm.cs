@@ -14,6 +14,7 @@ using ЗаочноеОтделение.SelfDataTabs.Groups;
 using ЗаочноеОтделение.SubjectDataTabs;
 using ЗаочноеОтделение.SubjectDataTabs.Prepod;
 using Word = Microsoft.Office.Interop.Word;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ЗаочноеОтделение
 {
@@ -483,6 +484,8 @@ namespace ЗаочноеОтделение
             // Формирование отчета "Личная карточка"
             Reports.DropDownItems[0].Click += (f, a) => new ReportsForm.SelfCard().ShowDialog();
             Reports.DropDownItems[1].Click += (f, a) => new ReportsForm.Diplom().ShowDialog();
+            //Reports.DropDownItems[2].Click += (f, a) => new ReportsForm.Diplom().ShowDialog();
+            Reports.DropDownItems[3].Click += (f, a) => new ReportsForm.ReportForJournalGroup().ShowDialog();
 
 
             // Событие при смене вкладки
@@ -517,6 +520,7 @@ namespace ЗаочноеОтделение
 
         #region Методы
 
+       
         /// <summary>
         /// Метод, который подкгружает данные во вкладку selfTab
         /// </summary>
