@@ -54,7 +54,7 @@ namespace ЗаочноеОтделение.SelfDataTabs
 
         private void save_Click(object sender, EventArgs e)
         {
-            (this.Owner as MainForm).UpdateDataInDiplomDataTable(
+            (this.Owner as MainForm).UpdateDataInSelfDataTable(
                 new string[]
                 {
                     "Шифр",

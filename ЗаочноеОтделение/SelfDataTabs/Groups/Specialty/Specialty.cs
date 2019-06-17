@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ProgLib.Data.OleDb;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,10 +47,21 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
             //Клик по кнопке "Редактировать запись"
             specialtyEditNote.Click += (f, a) => 
             {
-                new EditSpecialty()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (specialtyDataTable.SelectedItems.Count > 0)
+                    new EditSpecialty(new string[]
+                    {
+                        specialtyDataTable.SelectedItems[0].Text,
+                        specialtyDataTable.SelectedItems[0].SubItems[1].Text,
+                        specialtyDataTable.SelectedItems[0].SubItems[2].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             //Клик по кнопке "Фильтр выборки"
             specialtyFilter.Click += (f, a) => 
@@ -151,6 +164,57 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups.Specialty
                     cmd.Parameters.AddWithValue("@ID", id);
                     cmd.ExecuteNonQuery();
                 }
+            }
+        }
+
+        internal void UpdateDataInSpecDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Специальность] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Код] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Filter(ListView Table, String Request)
+        {
+            // Инициализация подключения к базе данных и запрос данных 
+            OleDbDataBase _database = new OleDbDataBase(new FileInfo(Properties.Settings.Default.ConnectionPath));
+            OleDbResult _result = _database.Request(Request);
+
+            // Вывод сообщеня об ошибке при её наличии
+            if (_result.Message != "Command(s) completed successfully.")
+                MessageBox.Show(_result.Message, "Ошибка запроса", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // Сбор данных
+            DataTable _data = _result.Table;
+            _database.Dispose();
+
+            // Очистка данных в ListView и заполнение новыми
+            Table.Items.Clear();
+            foreach (DataRow _row in _data.Rows)
+            {
+                ListViewItem Row = new ListViewItem(
+                    _row.ItemArray.Select(x => x.ToString()).ToArray());
+
+                Table.Items.Add(Row);
             }
         }
     }

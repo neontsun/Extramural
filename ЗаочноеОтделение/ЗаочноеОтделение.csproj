@@ -333,6 +333,9 @@
     <EmbeddedResource Include="SubjectDataTabs\Prepod\AddPrepodData.resx">
       <DependentUpon>AddPrepodData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectDataTabs\Prepod\EditPrepodData.resx">
+      <DependentUpon>EditPrepodData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectDataTabs\Prepod\FilterPrepodData.resx">
       <DependentUpon>FilterPrepodData.cs</DependentUpon>
     </EmbeddedResource>

@@ -43,10 +43,22 @@ namespace ЗаочноеОтделение.SubjectDataTabs.Prepod
             // Событие клика по кнопке "Редактировать запись"
             prepodTabEditNote.Click += (f, a) =>
             {
-                new EditPrepodData()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (prepodTabDataTable.SelectedItems.Count > 0)
+                    new EditPrepodData(new string[]
+                    {
+                        prepodTabDataTable.SelectedItems[0].Text,
+                        prepodTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        prepodTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        prepodTabDataTable.SelectedItems[0].SubItems[3].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             // Событие клика по кнопке "Фильтр выборки"
             prepodTabFilter.Click += (f, a) =>
@@ -194,6 +206,32 @@ namespace ЗаочноеОтделение.SubjectDataTabs.Prepod
                     _row.ItemArray.Select(x => x.ToString()).ToArray());
 
                 Table.Items.Add(Row);
+            }
+        }
+
+        internal void UpdateDataInPrepodDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Преподаватели] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [КодПреподавателя] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 

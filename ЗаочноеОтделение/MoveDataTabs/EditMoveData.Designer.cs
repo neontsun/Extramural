@@ -32,8 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.save = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.moveStatus = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.moveDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.moveCourse = new System.Windows.Forms.TextBox();
@@ -43,6 +41,8 @@
             this.moveLearningYear = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.shifr = new System.Windows.Forms.TextBox();
+            this.s = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // moveNumber
@@ -85,29 +85,6 @@
             this.cancel.TabIndex = 93;
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
-            // 
-            // moveStatus
-            // 
-            this.moveStatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.moveStatus.FormattingEnabled = true;
-            this.moveStatus.Items.AddRange(new object[] {
-            "Отчислен",
-            "Выпущен",
-            "Обучается"});
-            this.moveStatus.Location = new System.Drawing.Point(99, 238);
-            this.moveStatus.Name = "moveStatus";
-            this.moveStatus.Size = new System.Drawing.Size(253, 28);
-            this.moveStatus.TabIndex = 92;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(96, 206);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 18);
-            this.label10.TabIndex = 91;
-            this.label10.Text = "Статус";
             // 
             // moveDate
             // 
@@ -192,18 +169,37 @@
             this.panel1.Size = new System.Drawing.Size(498, 1);
             this.panel1.TabIndex = 82;
             // 
+            // shifr
+            // 
+            this.shifr.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.shifr.Location = new System.Drawing.Point(100, 234);
+            this.shifr.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.shifr.Name = "shifr";
+            this.shifr.Size = new System.Drawing.Size(164, 26);
+            this.shifr.TabIndex = 98;
+            // 
+            // s
+            // 
+            this.s.AutoSize = true;
+            this.s.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.s.Location = new System.Drawing.Point(97, 206);
+            this.s.Name = "s";
+            this.s.Size = new System.Drawing.Size(56, 18);
+            this.s.TabIndex = 97;
+            this.s.Text = "Шифр";
+            // 
             // EditMoveData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(695, 375);
+            this.Controls.Add(this.shifr);
+            this.Controls.Add(this.s);
             this.Controls.Add(this.moveNumber);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.moveStatus);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.moveDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.moveCourse);
@@ -230,8 +226,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.ComboBox moveStatus;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox moveDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox moveCourse;
@@ -241,5 +235,7 @@
         private System.Windows.Forms.TextBox moveLearningYear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox shifr;
+        private System.Windows.Forms.Label s;
     }
 }

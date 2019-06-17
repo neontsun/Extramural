@@ -43,10 +43,22 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
             // Клик по кнопке "Добавить запись"
             groupsEditNote.Click += (f, a) => 
             {
-                new EditGroups()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (groupsDataTable.SelectedItems.Count > 0)
+                    new EditGroups(new string[]
+                    {
+                        groupsDataTable.SelectedItems[0].Text,
+                        groupsDataTable.SelectedItems[0].SubItems[1].Text,
+                        groupsDataTable.SelectedItems[0].SubItems[2].Text,
+                        groupsDataTable.SelectedItems[0].SubItems[3].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             // Клик по кнопке "Сбросить фильтр"
             groupsFilterClear.Click += (f, a) => 
@@ -178,6 +190,32 @@ namespace ЗаочноеОтделение.SelfDataTabs.Groups
                     _row.ItemArray.Select(x => x.ToString()).ToArray());
 
                 Table.Items.Add(Row);
+            }
+        }
+
+        internal void UpdateDataInGroupDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Группы] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Код] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }

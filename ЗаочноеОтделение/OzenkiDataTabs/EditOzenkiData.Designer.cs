@@ -32,7 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.save = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.ozenkiStatus = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ozenkiOzenka = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,6 +42,9 @@
             this.ozenkiChipher = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.KRIsTrue = new System.Windows.Forms.CheckBox();
+            this.KRIsOzenka = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ozenkiSubject
@@ -63,7 +65,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Location = new System.Drawing.Point(111, 210);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 1);
+            this.panel3.Size = new System.Drawing.Size(499, 1);
             this.panel3.TabIndex = 80;
             // 
             // save
@@ -90,28 +92,15 @@
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
             // 
-            // ozenkiStatus
-            // 
-            this.ozenkiStatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ozenkiStatus.FormattingEnabled = true;
-            this.ozenkiStatus.Items.AddRange(new object[] {
-            "Отчислен",
-            "Выпущен",
-            "Обучается"});
-            this.ozenkiStatus.Location = new System.Drawing.Point(111, 221);
-            this.ozenkiStatus.Name = "ozenkiStatus";
-            this.ozenkiStatus.Size = new System.Drawing.Size(253, 28);
-            this.ozenkiStatus.TabIndex = 77;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(108, 189);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 18);
+            this.label10.Size = new System.Drawing.Size(93, 18);
             this.label10.TabIndex = 76;
-            this.label10.Text = "Статус";
+            this.label10.Text = "Наличие КР";
             // 
             // ozenkiOzenka
             // 
@@ -196,17 +185,47 @@
             this.panel1.Size = new System.Drawing.Size(498, 1);
             this.panel1.TabIndex = 67;
             // 
+            // KRIsTrue
+            // 
+            this.KRIsTrue.AutoSize = true;
+            this.KRIsTrue.Location = new System.Drawing.Point(132, 217);
+            this.KRIsTrue.Name = "KRIsTrue";
+            this.KRIsTrue.Size = new System.Drawing.Size(15, 14);
+            this.KRIsTrue.TabIndex = 82;
+            this.KRIsTrue.UseVisualStyleBackColor = true;
+            // 
+            // KRIsOzenka
+            // 
+            this.KRIsOzenka.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.KRIsOzenka.Location = new System.Drawing.Point(493, 217);
+            this.KRIsOzenka.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.KRIsOzenka.Name = "KRIsOzenka";
+            this.KRIsOzenka.Size = new System.Drawing.Size(117, 26);
+            this.KRIsOzenka.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(488, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 18);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Оценка КР";
+            // 
             // EditOzenkiData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(719, 355);
+            this.Controls.Add(this.KRIsOzenka);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.KRIsTrue);
             this.Controls.Add(this.ozenkiSubject);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.save);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.ozenkiStatus);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ozenkiOzenka);
             this.Controls.Add(this.label7);
@@ -234,7 +253,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.ComboBox ozenkiStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox ozenkiOzenka;
         private System.Windows.Forms.Label label7;
@@ -245,5 +263,8 @@
         private System.Windows.Forms.TextBox ozenkiChipher;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox KRIsTrue;
+        private System.Windows.Forms.TextBox KRIsOzenka;
+        private System.Windows.Forms.Label label3;
     }
 }

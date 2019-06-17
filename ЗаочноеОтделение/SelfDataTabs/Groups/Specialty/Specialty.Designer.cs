@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.specialtyDataTable = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.specialtyToolsSeparatorVertical2 = new System.Windows.Forms.Panel();
             this.specialtyToolsSeparatorVertical1 = new System.Windows.Forms.Panel();
             this.specialtyToolsSeparatorHorizontal = new System.Windows.Forms.Panel();
@@ -38,9 +41,6 @@
             this.specialtyFilter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.specialtyDeleteNote = new System.Windows.Forms.Button();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // specialtyDataTable
@@ -59,6 +59,20 @@
             this.specialtyDataTable.TabIndex = 28;
             this.specialtyDataTable.UseCompatibleStateImageBehavior = false;
             this.specialtyDataTable.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ID";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Код специальности";
+            this.columnHeader5.Width = 228;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Наименование специальности";
+            this.columnHeader6.Width = 300;
             // 
             // specialtyToolsSeparatorVertical2
             // 
@@ -172,20 +186,6 @@
             this.specialtyDeleteNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.specialtyDeleteNote.UseVisualStyleBackColor = true;
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "ID";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Код специальности";
-            this.columnHeader5.Width = 228;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Наименование специальности";
-            this.columnHeader6.Width = 300;
-            // 
             // Specialty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +213,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView specialtyDataTable;
         private System.Windows.Forms.Panel specialtyToolsSeparatorVertical2;
         private System.Windows.Forms.Panel specialtyToolsSeparatorVertical1;
         private System.Windows.Forms.Panel specialtyToolsSeparatorHorizontal;
@@ -226,5 +225,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        public System.Windows.Forms.ListView specialtyDataTable;
     }
 }

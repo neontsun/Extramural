@@ -1,4 +1,4 @@
-internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
+﻿internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
 {
 	// Создаем подключение к бд и передаем строку подключения в параметры
 	using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
@@ -96,3 +96,34 @@ this.Load += (f, a) =>
 );
 (this.Owner as MainForm).LoadDataInSelfDataTable();
 this.Close();
+
+
+
+
+
+
+
+
+// Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (selfTabDataTable.SelectedItems.Count > 0)
+                    new EditSelfData(new string[] 
+                    {
+                        selfTabDataTable.SelectedItems[0].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[4].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[5].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[6].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[7].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[8].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[9].Text,
+                        selfTabDataTable.SelectedItems[0].SubItems[10].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");

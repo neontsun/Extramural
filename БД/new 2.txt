@@ -1,0 +1,59 @@
+selfTabDeleteNote.Click += (f, a) => 
+{
+
+	if (selfTabDataTable.SelectedItems.Count > 0)
+	{
+		string str = selfTabDataTable.SelectedItems[0].Text;
+		DeleteDataInSelfDataTable(str);
+		LoadDataInSelfDataTable();
+	}
+	// Иначе показываем ошибку
+	else
+		MessageBox.Show("Выберите запись для редактирования");
+};
+	
+	
+	
+	
+
+
+
+internal void DeleteDataInSelfDataTable(string id)
+{
+	// Создаем подключение к бд и передаем строку подключения в параметры
+	using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+	{
+		// Открываем подключение
+		conn.Open();
+		// Создаем команду
+		using (var cmd = conn.CreateCommand())
+		{
+			// Отдельно запросы...
+
+			// Создаем запрос к бд
+			cmd.CommandText = "DELETE " +
+							  "FROM [Успеваемость] " +
+							  "WHERE [Шифр] = @ID";
+			cmd.Parameters.AddWithValue("@ID", id);
+			cmd.ExecuteNonQuery();
+
+			cmd.CommandText = "DELETE " +
+							  "FROM [Движение] " +
+							  "WHERE [Шифр] = @ID";
+			cmd.Parameters.AddWithValue("@ID", id);
+			cmd.ExecuteNonQuery();
+
+			cmd.CommandText = "DELETE " +
+							  "FROM [Диплом] " +
+							  "WHERE [Шифр] = @ID";
+			cmd.Parameters.AddWithValue("@ID", id);
+			cmd.ExecuteNonQuery();
+
+			cmd.CommandText = "DELETE " +
+							  "FROM [Личные данные] " +
+							  "WHERE [Шифр] = @ID";
+			cmd.Parameters.AddWithValue("@ID", id);
+			cmd.ExecuteNonQuery();
+		}
+	}
+}

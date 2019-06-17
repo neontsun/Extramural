@@ -149,10 +149,25 @@ namespace ЗаочноеОтделение
             // Событие при нажатие на кнопку "Редактировать запись"
             ozenkiTabEditNote.Click += (f, a) => 
             {
-                new EditOzenkiData()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (ozenkiTabDataTable.SelectedItems.Count > 0)
+                    new EditOzenkiData(new string[]
+                    {
+                        ozenkiTabDataTable.SelectedItems[0].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[4].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[5].Text,
+                        ozenkiTabDataTable.SelectedItems[0].SubItems[6].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             // Событие при нажатие на кнопку "Очистить фильтр"
             ozenkiTabFilterClear.Click += (f, a) => 
@@ -213,10 +228,23 @@ namespace ЗаочноеОтделение
             };
             subjectTabEditNote.Click += (f, a) =>
             {
-                new EditSubjectData()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (subjectTabDataTable.SelectedItems.Count > 0)
+                    new EditSubjectData(new string[]
+                    {
+                        subjectTabDataTable.SelectedItems[0].Text,
+                        subjectTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        subjectTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        subjectTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        subjectTabDataTable.SelectedItems[0].SubItems[4].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             subjectTabFilter.Click += (f, a) => 
             {
@@ -283,10 +311,24 @@ namespace ЗаочноеОтделение
             };
             diplomTabEditNote.Click += (f, a) =>
             {
-                new EditDiplomData()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (diplomTabDataTable.SelectedItems.Count > 0)
+                    new EditDiplomData(new string[]
+                    {
+                        diplomTabDataTable.SelectedItems[0].Text,
+                        diplomTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        diplomTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        diplomTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        diplomTabDataTable.SelectedItems[0].SubItems[4].Text,
+                        diplomTabDataTable.SelectedItems[0].SubItems[5].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             diplomTabFilter.Click += (f, a) =>
             {
@@ -352,10 +394,24 @@ namespace ЗаочноеОтделение
             // Событие клика по кнопке "Редактировать запись"
             moveTabEditNote.Click += (f, a) => 
             {
-                new EditMoveData()
-                {
-                    Owner = this
-                }.ShowDialog();
+                // Если количество выбранных записей в таблице 
+                // больше нуля, то открываем форму редактирования
+                if (moveTabDataTable.SelectedItems.Count > 0)
+                    new EditMoveData(new string[]
+                    {
+                        moveTabDataTable.SelectedItems[0].Text,
+                        moveTabDataTable.SelectedItems[0].SubItems[1].Text,
+                        moveTabDataTable.SelectedItems[0].SubItems[2].Text,
+                        moveTabDataTable.SelectedItems[0].SubItems[3].Text,
+                        moveTabDataTable.SelectedItems[0].SubItems[4].Text,
+                        moveTabDataTable.SelectedItems[0].SubItems[5].Text
+                    })
+                    {
+                        Owner = this
+                    }.ShowDialog();
+                // Иначе показываем ошибку
+                else
+                    MessageBox.Show("Выберите запись для редактирования");
             };
             // Событие клика по кнопке "Фильтр выборки"
             moveTabFilter.Click += (f, a) => 
@@ -546,7 +602,7 @@ namespace ЗаочноеОтделение
                     cmd.CommandText = "SELECT [Успеваемость].[Код], " +
                                       "       [Шифр]," +
                                       "       [Курс]," +
-                                      "       [НаименованиеПредмета]," +
+                                      "       [НаименованиеПредмета] & \" \" & [КоличествоЧасов] & \"ч\" & [Курс] & \"к\"," +
                                       "       [Оценка]," +
                                       "       [НаличиеКР]," +
                                       "       [ОценкаКР] " +
@@ -655,7 +711,7 @@ namespace ЗаочноеОтделение
                     cmd.CommandText = "SELECT [КодПредмета]," +
                                       "       [НаименованиеПредмета]," +
                                       "       [КоличествоЧасов]," +
-                                      "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.', " +
+                                      "       [Фамилия] & ' ' & [Имя] & ' ' & [Отчество], " +
                                       "       [Курс]" +
                                       "FROM [Предметы] " +
                                       "INNER JOIN [Преподаватели] ON [Преподаватели].[КодПреподавателя] = [Предметы].[КодПреподавателя]";
@@ -707,7 +763,7 @@ namespace ЗаочноеОтделение
                     // Создаем запрос к бд
                     cmd.CommandText = "SELECT [Шифр]," +
                                       "       [Тема]," +
-                                      "       [Фамилия] & ' ' & LEFT([Имя], 1) & '.' & LEFT([Отчество], 1) & '.', " +
+                                      "       [Фамилия] & ' ' & [Имя] & ' ' & [Отчество], " +
                                       "       [СрокиСдачи], " +
                                       "       [Выдан], " +
                                       "       [Сдан]" +
@@ -855,7 +911,7 @@ namespace ЗаочноеОтделение
 
 
 
-        internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
+        internal void UpdateDataInSelfDataTable(string[] fields, string[] values, string[] where)
         {
             // Создаем подключение к бд и передаем строку подключения в параметры
             using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
@@ -881,10 +937,112 @@ namespace ЗаочноеОтделение
             }
         }
 
+        internal void UpdateDataInOzenkiDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Успеваемость] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Код] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void UpdateDataInMoveDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Движение] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Код] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void UpdateDataInSubjectDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Предметы] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [КодПредмета] = " + where[0];
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void UpdateDataInDiplomDataTable(string[] fields, string[] values, string[] where)
+        {
+            // Создаем подключение к бд и передаем строку подключения в параметры
+            using (var conn = new OleDbConnection(Properties.Settings.Default.connect))
+            {
+                // Открываем подключение
+                conn.Open();
+                // Создаем команду
+                using (var cmd = conn.CreateCommand())
+                {
+                    // Отдельно запросы...
+
+                    // Сборка данных в запрос
+                    cmd.CommandText = "UPDATE [Диплом] " +
+                                      "SET ";
+
+                    for (int i = 0; i < fields.Length; i++)
+                    {
+                        cmd.CommandText += "[" + fields[i] + "] = '" + values[i] + "', ";
+                    }
+                    cmd.CommandText = cmd.CommandText.Remove(cmd.CommandText.Length - 2) + " WHERE [Шифр] = '" + where[0] + "'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
         #endregion
-
-
+        
         public void Filter(ListView Table, String Request)
         {
             // Инициализация подключения к базе данных и запрос данных 
