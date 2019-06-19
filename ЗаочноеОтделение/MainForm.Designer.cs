@@ -127,8 +127,9 @@
             this.личнаяКарточкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дипломныйПроектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.общиеСведенияОСтудентеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.журналСводнойВедомостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.спискиСтудентовПоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs.SuspendLayout();
             this.selfTab.SuspendLayout();
             this.ozenkiTab.SuspendLayout();
@@ -1135,7 +1136,8 @@
             this.личнаяКарточкаToolStripMenuItem,
             this.дипломныйПроектToolStripMenuItem,
             this.общиеСведенияОСтудентеToolStripMenuItem,
-            this.журналСводнойВедомостиToolStripMenuItem});
+            this.журналСводнойВедомостиToolStripMenuItem,
+            this.спискиСтудентовПоГруппамToolStripMenuItem});
             this.Reports.Name = "Reports";
             this.Reports.Size = new System.Drawing.Size(64, 21);
             this.Reports.Text = "Отчеты";
@@ -1143,32 +1145,38 @@
             // личнаяКарточкаToolStripMenuItem
             // 
             this.личнаяКарточкаToolStripMenuItem.Name = "личнаяКарточкаToolStripMenuItem";
-            this.личнаяКарточкаToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.личнаяКарточкаToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.личнаяКарточкаToolStripMenuItem.Text = "Личная карточка";
             // 
             // дипломныйПроектToolStripMenuItem
             // 
             this.дипломныйПроектToolStripMenuItem.Name = "дипломныйПроектToolStripMenuItem";
-            this.дипломныйПроектToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.дипломныйПроектToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.дипломныйПроектToolStripMenuItem.Text = "Дипломный проект";
             // 
             // общиеСведенияОСтудентеToolStripMenuItem
             // 
             this.общиеСведенияОСтудентеToolStripMenuItem.Name = "общиеСведенияОСтудентеToolStripMenuItem";
-            this.общиеСведенияОСтудентеToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.общиеСведенияОСтудентеToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.общиеСведенияОСтудентеToolStripMenuItem.Text = "Общие сведения о студенте";
+            // 
+            // журналСводнойВедомостиToolStripMenuItem
+            // 
+            this.журналСводнойВедомостиToolStripMenuItem.Name = "журналСводнойВедомостиToolStripMenuItem";
+            this.журналСводнойВедомостиToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.журналСводнойВедомостиToolStripMenuItem.Text = "Журнал сводной ведомости";
+            // 
+            // спискиСтудентовПоГруппамToolStripMenuItem
+            // 
+            this.спискиСтудентовПоГруппамToolStripMenuItem.Name = "спискиСтудентовПоГруппамToolStripMenuItem";
+            this.спискиСтудентовПоГруппамToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.спискиСтудентовПоГруппамToolStripMenuItem.Text = "Списки студентов по группам";
             // 
             // Settings
             // 
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(92, 21);
             this.Settings.Text = "Настройки";
-            // 
-            // журналСводнойВедомостиToolStripMenuItem
-            // 
-            this.журналСводнойВедомостиToolStripMenuItem.Name = "журналСводнойВедомостиToolStripMenuItem";
-            this.журналСводнойВедомостиToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.журналСводнойВедомостиToolStripMenuItem.Text = "Журнал сводной ведомости";
             // 
             // MainForm
             // 
@@ -1297,6 +1305,7 @@
         public System.Windows.Forms.ListView moveTabDataTable;
         public System.Windows.Forms.ListView diplomTabDataTable;
         private System.Windows.Forms.ToolStripMenuItem журналСводнойВедомостиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem спискиСтудентовПоГруппамToolStripMenuItem;
     }
 }
 

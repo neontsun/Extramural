@@ -43,3 +43,4 @@ C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтдел
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.Prepod.FilterPrepodData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.SubjectDataTabs.Prepod.EditPrepodData.resources
 C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.ReportsForm.ReportForJournalGroup.resources
+C:\Users\tsund\Desktop\ЗаочноеОтделение\ЗаочноеОтделение\obj\Debug\ЗаочноеОтделение.ReportsForm.ReportForGroup.resources

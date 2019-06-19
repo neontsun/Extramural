@@ -111,6 +111,12 @@
     <Compile Include="ReportsForm\Diplom.Designer.cs">
       <DependentUpon>Diplom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportsForm\ReportForGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm\ReportForGroup.Designer.cs">
+      <DependentUpon>ReportForGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsForm\ReportForJournalGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsForm\Diplom.resx">
       <DependentUpon>Diplom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm\ReportForGroup.resx">
+      <DependentUpon>ReportForGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsForm\ReportForJournalGroup.resx">
       <DependentUpon>ReportForJournalGroup.cs</DependentUpon>
