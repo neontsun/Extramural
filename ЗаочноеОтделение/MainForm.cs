@@ -485,8 +485,8 @@ namespace ЗаочноеОтделение
             Reports.DropDownItems[0].Click += (f, a) => new ReportsForm.SelfCard().ShowDialog();
             Reports.DropDownItems[1].Click += (f, a) => new ReportsForm.Diplom().ShowDialog();
             //Reports.DropDownItems[2].Click += (f, a) => new ReportsForm.Diplom().ShowDialog();
-            Reports.DropDownItems[3].Click += (f, a) => new ReportsForm.ReportForJournalGroup().ShowDialog();
-            Reports.DropDownItems[4].Click += (f, a) => new ReportsForm.ReportForGroup().ShowDialog();
+            Reports.DropDownItems[2].Click += (f, a) => new ReportsForm.ReportForJournalGroup().ShowDialog();
+            Reports.DropDownItems[3].Click += (f, a) => new ReportsForm.ReportForGroup().ShowDialog();
 
 
             // Событие при смене вкладки

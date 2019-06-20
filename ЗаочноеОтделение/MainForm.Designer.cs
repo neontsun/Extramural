@@ -126,7 +126,6 @@
             this.Reports = new System.Windows.Forms.ToolStripMenuItem();
             this.личнаяКарточкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дипломныйПроектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.общиеСведенияОСтудентеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.журналСводнойВедомостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.спискиСтудентовПоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Settings = new System.Windows.Forms.ToolStripMenuItem();
@@ -1135,7 +1134,6 @@
             this.Reports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.личнаяКарточкаToolStripMenuItem,
             this.дипломныйПроектToolStripMenuItem,
-            this.общиеСведенияОСтудентеToolStripMenuItem,
             this.журналСводнойВедомостиToolStripMenuItem,
             this.спискиСтудентовПоГруппамToolStripMenuItem});
             this.Reports.Name = "Reports";
@@ -1153,12 +1151,6 @@
             this.дипломныйПроектToolStripMenuItem.Name = "дипломныйПроектToolStripMenuItem";
             this.дипломныйПроектToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.дипломныйПроектToolStripMenuItem.Text = "Дипломный проект";
-            // 
-            // общиеСведенияОСтудентеToolStripMenuItem
-            // 
-            this.общиеСведенияОСтудентеToolStripMenuItem.Name = "общиеСведенияОСтудентеToolStripMenuItem";
-            this.общиеСведенияОСтудентеToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
-            this.общиеСведенияОСтудентеToolStripMenuItem.Text = "Общие сведения о студенте";
             // 
             // журналСводнойВедомостиToolStripMenuItem
             // 
@@ -1274,7 +1266,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader29;
         private System.Windows.Forms.ToolStripMenuItem личнаяКарточкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дипломныйПроектToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem общиеСведенияОСтудентеToolStripMenuItem;
         private System.Windows.Forms.Button selfTabDeleteNote;
         private System.Windows.Forms.Button ozenkiTabDeleteNote;
         private System.Windows.Forms.Button moveTabDeleteNote;
